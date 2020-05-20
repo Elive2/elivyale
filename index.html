@@ -1,3 +1,51 @@
+<!--
+TODO:
+(in no particular order)
+
+[x] - write a small svg concatenator and load svgs from that
+	- try all different export combos from illustrator
+	- try not using spritebot
+	- alternatives to <use>, viewboxing, or object, or just plain image
+	- try in a test file like locate.html, incase it is a z-index issue
+	*Lessons: SVG Gradients, wether internal css, inline css or whatever
+	do not render when the svg is <used> in another document. This is a 
+	chrome bug. You should be able to define the gradients in your html, 
+	then reference them in the <use>ed svg But this is tricky and not 
+	worth the hassle. If the SVG is small enough, like the cliffs and
+	shelves, just inline them to save requests. If the SVG is larger like 
+	the trees, just request it and load however you like. Defeat boco
+	literally loads all svg independently with no speed issues, well a little
+	there is a loading animation at the start.
+[x] - fix cliffs
+[x] - smoother/slower mountains in the beggining
+[x] - seperate css? do I want to do this or just keep one large file
+[ ] - add corals - efficient way to do this??
+[ ] - write content
+[ ] - links to social and github
+[ ] - add nav menu
+[ ] - add non animated waterfall
+[ ] - add footer
+
+EXTRA:
+(in order of importance)
+
+[ ] - make responsive and mobile friendly
+[ ] - animate waterfall
+[ ] - linear interpretation for parallax
+[ ] - animate river, water flow and side to side movement
+[ ] - picture of me or vector art
+[ ] - animated animals - htmlcanvas or lottie??
+[ ] - Design portfolio page
+[ ] - Code Portfolio Page
+[ ] - Blog Page
+[ ] - easter eggs
+[ ] - accessibility
+[ ] - theme changes based on time of day or season
+
+
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +53,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<!-- <link rel="icon" href="images/svg_sprites.svg" type="image/svg+xml"> -->
+	<!-- <link rel="import" href="./images/svg_sprites.svg"> -->
+	<!-- <object type="image/svg+xml" data="/images/svg_sprites.svg" style="display:none"></object> -->
 </head>
 <body>
 	<div id="svg-container">
 		<div class="background-gradient">
-			<img src="./images/gradient.svg" class="absolute-img">
+			<!-- <img src="./images/gradient.svg" class="absolute-img"> -->
+			<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 15000"><defs><linearGradient id="linear-gradient" x1="960" y1="1092.24" x2="960" y2="12703.03" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#446763"/><stop offset="0.22" stop-color="#5a786d"/><stop offset="0.56" stop-color="#8c9f86"/><stop offset="0.58" stop-color="#c1e2d9"/><stop offset="0.8" stop-color="#397f92"/></linearGradient></defs><rect x="1.5" y="-2.58" width="1917" height="15005.16" style="fill:url(#linear-gradient)"/></svg>
 			<div class="logo-wrapper">
 				<a href="#"><img src="images/logo_style.svg" class="absolute-img"></a>
 			</div>
@@ -23,25 +75,27 @@
 				About
 			</div>
 			<div class="about-wrapper normal-text white">
+
 				I like to dream big then sketch out a plan and build it. I love taking large complex problems and designing <a href="">full-stack</a> systems to solve them. I have a <a href="">B.S.</a> in Computer Science and Engineering with a Mathematics minor from Santa Clara University. I have designed and built solutions for <a href="">Ford</a> Motor Compnay and <a href="">Cisco</a> Systems through internships. I have expolered <a href="">Computational creativity</a> during my time at Santa Clara. Currently I am looking for impactful freelance opportunities. Welcome to my own little corner on the internet.
 			</div>
 			<div id="mountains1">
-				<img src="./images/mountains1.svg" class="absolute-img">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1922.79 541.07"><defs><radialGradient id="radial-gradient" cx="961.4" cy="270.54" r="706.21" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5b464d"/><stop offset="0.5" stop-color="#735561"/><stop offset="1" stop-color="#8e7d83"/></radialGradient></defs><polyline points="1922.79 138.99 1756.66 20.54 1670.83 45.67 1625.79 26.8 1461.1 193.59 1360.5 155.85 1261.22 209.48 1178.17 198.56 1126.54 177.21 1078.23 209.48 1057.11 194.59 989.55 209.48 872.86 147.44 819.23 186.65 729.14 202.53 602.46 153.88 502.52 220.4 373.02 90.34 301.23 78.43 233.66 0 33.78 170.76 0 170.35 0 541.07 1922.79 541.07 1922.79 138.99" style="fill:url(#radial-gradient)"/></svg>
 			</div>
 			<div id="mountains2">
-				<img src="./images/mountains2.svg" class="absolute-img">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1923 555.12"><defs><radialGradient id="radial-gradienta" cx="961.5" cy="277.81" r="707.6" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#856e65"/><stop offset="0.64" stop-color="#94786d"/><stop offset="1" stop-color="#a1887e"/></radialGradient><radialGradient id="radial-gradient-2" cx="234.39" cy="138.4" r="107.22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#aaaf9a"/><stop offset="0.64" stop-color="#b6baa8"/><stop offset="1" stop-color="#cfdac0"/></radialGradient><radialGradient id="radial-gradient-3" cx="379.39" cy="154.95" r="103.69" xlink:href="#radial-gradient-2"/><radialGradient id="radial-gradient-4" cx="612.38" cy="217.13" r="59.75" xlink:href="#radial-gradient-2"/><radialGradient id="radial-gradient-5" cx="817.2" cy="223.15" r="55.72" xlink:href="#radial-gradient-2"/><radialGradient id="radial-gradient-6" cx="1065.67" cy="216.13" r="53.17" xlink:href="#radial-gradient-2"/><radialGradient id="radial-gradient-7" cx="1356.38" cy="220.64" r="60.34" xlink:href="#radial-gradient-2"/><radialGradient id="radial-gradient-8" cx="1760.4" cy="144.92" r="132.92" xlink:href="#radial-gradient-2"/><radialGradient id="radial-gradient-9" cx="1594.99" cy="145.42" r="52.29" xlink:href="#radial-gradient-2"/></defs><polyline points="0 148.94 188.64 0.5 251.99 54.66 297.04 35.6 461.75 204.1 582.6 157.47 661.65 220.14 744.71 209.11 812.28 170 844.66 220.14 865.77 205.1 933.35 220.14 1050.05 157.47 1103.68 197.08 1193.78 213.12 1320.48 163.98 1420.43 231.18 1549.94 99.79 1621.74 87.76 1689.31 8.53 1889.21 181.03 1923 180.62 1923 555.12 0 555.12 0 148.94" style="fill:url(#radial-gradienta)"/><polygon points="207.65 276.81 172.45 207.61 190.75 142.42 224.54 109.32 189.34 0 252.69 54.16 265.36 108.32 265.36 157.46 296.33 194.57 207.65 276.81" style="fill:url(#radial-gradient-2)"/><polygon points="362.5 275.81 373.76 213.62 334.34 109.32 304.78 83.24 296.33 34.1 462.45 202.59 441.33 242.71 448.37 261.76 362.5 275.81" style="fill:url(#radial-gradient-3)"/><polygon points="582.11 276.81 559.59 238.7 552.55 213.62 560.99 195.57 568.03 176.52 582.11 157.46 662.35 218.64 672.21 245.72 629.97 232.68 659.54 276.81 613.08 259.76 582.11 276.81" style="fill:url(#radial-gradient-4)"/><polygon points="797.5 276.81 759.49 247.72 770.75 223.65 786.23 202.59 810.17 169.5 842.54 216.63 836.91 243.71 874.92 241.71 859.44 257.75 817.21 251.74 797.5 276.81" style="fill:url(#radial-gradient-5)"/><polygon points="1019.92 275.81 1050.89 248.73 1035.41 230.67 1050.89 199.58 1035.41 177.52 1050.89 156.46 1102.98 195.57 1111.43 233.68 1077.64 221.65 1080.46 264.77 1019.92 275.81" style="fill:url(#radial-gradient-6)"/><polygon points="1311.33 277.81 1293.03 207.61 1302.88 186.54 1319.78 163.48 1419.73 230.67 1311.33 277.81" style="fill:url(#radial-gradient-7)"/><polygon points="1701.28 279.82 1682.98 243.71 1629.48 207.61 1664.68 159.47 1680.16 106.31 1701.28 55.16 1691.42 10.03 1891.33 182.53 1792.78 212.62 1839.24 225.66 1701.28 279.82" style="fill:url(#radial-gradient-8)"/><polygon points="1550.65 98.29 1583.03 162.47 1628.07 204.6 1639.34 109.32 1628.07 86.25 1550.65 98.29" style="fill:url(#radial-gradient-9)"/></svg>
 			</div>
 			<div id="mountains3">
-				<img src="./images/mountains3.svg" class="absolute-img">
+				<!-- <img src="./images/mountains3.svg" class="absolute-img"> -->
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920.99 191.5"><defs><radialGradient id="radial-gradientb" cx="960.49" cy="95.75" r="682.54" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6d7751"/><stop offset="0.53" stop-color="#8b9766"/><stop offset="1" stop-color="#aeb98d"/></radialGradient></defs><polygon points="1920.99 191.5 1919.9 13.04 1865.09 12.04 1832.76 22.06 1770.92 0 1675.35 44.13 1635.99 12.04 1591.02 34.1 1568.53 12.04 1496.85 12.04 1496.85 44.13 1443.44 31.09 1426.58 0 1390.03 22.06 1291.65 22.06 1227 44.13 1149.69 20.06 1043.1 13.04 997.9 29.09 931.84 29.09 832.05 25.07 740.7 15.04 666.2 26.08 604.36 15.04 550.95 13.04 531.28 24.07 473.65 15.04 410.4 9.03 383.7 20.06 344.35 21.06 307.8 7.02 275.48 23.07 236.12 6.02 226.28 17.05 217.85 26.08 158.82 9.03 146.17 18.05 88.55 15.04 68.87 0 36.54 9.03 0.12 29.47 0 117.02 0.67 191.5 299.34 120.28 670.42 134.39 1122.99 99.29 1616.3 100.95 1810.74 136.56 1920.99 191.5" style="fill:url(#radial-gradientb)"/></svg>
 			</div>
 			<div id="lake">
-				<img src="./images/lake.svg" class="absolute-img">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1923 581.27"><defs><radialGradient id="radial-gradientc" cx="961.5" cy="290.64" r="710.26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#80a8aa"/><stop offset="0.64" stop-color="#8db4ba"/><stop offset="1" stop-color="#98bec7"/></radialGradient></defs><polygon points="1886.53 429.28 1287.04 567.75 1112 581.27 1233 486.66 1245.32 396.32 681.83 334.76 0 348.42 0 33 39.38 9.64 1921.59 0 1923 347.29 1886.53 429.28 1886.53 429.28" style="fill:url(#radial-gradientc)"/></svg>
 			</div>
 			<div id="cliff1">
-				<img src="./images/cliff1.svg" class="absolute-img">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1380.61 610.28"><defs><radialGradient id="radial-gradientd" cx="690.3" cy="305.14" r="533.68" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#bbbd9d"/><stop offset="0.64" stop-color="#bbc0a3"/><stop offset="1" stop-color="#c1c5ab"/></radialGradient></defs><polygon points="0.6 0 1380.61 22.74 1353.38 178.08 1183.79 213.75 1148.56 610.28 948.06 552.26 766.15 378.52 504.01 339.26 180.74 334.41 0 238.87 0.6 0" style="fill:url(#radial-gradientd)"/></svg>
 			</div>
 			<div id="cliff2">
-				<img src="./images/cliff2.svg" class="absolute-img">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 649.19 674"><defs><radialGradient id="radial-gradiente" cx="1652.71" cy="-67.14" r="514.35" gradientTransform="matrix(0.55, 0, 0, -0.8, -578.01, 283.04)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#bbbd9d"/><stop offset="0.64" stop-color="#bbc0a3"/><stop offset="1" stop-color="#c1c5ab"/></radialGradient></defs><polygon points="649.19 0 10.1 304.14 0 674 106.96 570.67 324.6 501.63 558.7 496.55 649.19 453.98 649.19 0" style="fill:url(#radial-gradiente)"/></svg>
 			</div>
 			<!-- <div id="waterfall">
 				<img src="./images/waterfall.svg" class="absolute-img">
@@ -67,41 +121,81 @@
 			<div id="trees6">
 				<img src="./images/trees6.svg" class="absolute-img">
 			</div>
-			<!-- <div id="trees7">
+			<div class="big-text quicksand white experience-jump-point" id="experience">
+				Experience
+			</div>
+			<div id="cisco" class="quicksand white">
+				<div class="med-text">Cisco Systems - Software Engineering Intern</div>
+				<br>
+				<p class="normal-text">
+					This summer internship was my first experience in the software industry. I didn't know much about the level of quality and reliability that is expected from production software. When my first deadline and demo rolled around, I realized I had darastically underdelivered. My mentor told me to take a step back, take some time to review tutorials and really understand the Xcode frameworks. He said to give him a realistic date for the next demo. After accepting this important lesson, making sure i understood my technologies, and working dilligently and methodically, I delivered a quality demo by the next deadline and ended up with a corwd favorite final presentation. These lessons were important but I still had a long way to go.
+				</p>
+			</div>
+			<div id="trees7">
 				<img src="./images/trees7.svg" class="absolute-img">
-			</div> -->
-			<!-- <div id="trees8">
+			</div>
+			<div id="ford" class="quicksand white">
+				<div class="med-text">Ford Motor Company - Advanced Engineering Intern</div>
+				<br>
+				<p class="normal-text">
+					For my second internship i was ready to hit the ground running. I knew my working style, pace and what I could accomplish in one summer. Whereas with Cisco I worked solo, at Ford I was part of a three man team including one other intern. 
+				</p>
+			</div>
+			<div id="trees8">
 				<img src="./images/trees8.svg" class="absolute-img">
-			</div> -->
-			<!-- <div class="experience-jump-point big-text paul">
-				Experience 
 			</div>
-			<div class="rock1">
-				<img src="./images/rock1.svg" class="absolute-img">
+			<div id="freelance" class="quicksand white">
+				<div class="med-text">Freelance Web Design and Development</div>
+				<br>
+				<p class="normal-text">
+					After graduating I took some time to travel, read more about that here. During me journey through Europe I kept up on my studies exploring new web technologies, design tools, and some personal writing. After enjoying traveling so much and getting used to being productive on the road I decided it would be worth it to look into freelancing opportunities where I could work remotely. To add to my skill set I learned Adobe Illustrator, After Effect, and dabbled in Premier Pro. 
+				</p>
 			</div>
-			<div class="text-box normal-text paul" id="Cisco-text">
-				<img src="./images/text_box.svg" class="absolute-img">
-				<div>Cisco Systems</div>
-				• Cisco Systems---Software Engineering Intern, Global IT..............................Summer 2017 Developed and tested iOS applications with objective C, C++, and LLDB in Xcode Leveraged modern computer vision techniques for detection of faces and license plates. Integrated native iOS frameworks with openCV and openALPR for novel solutions Worked with an agile team and the Campus Security unit to deploy these apps and streamline safety procedures for Cisco HQ
+			<div class="big-text quicksand white projects-jump-point" id="projects">
+				Projects
 			</div>
-			<div class="rock2">
-				<img src="./images/rock2.svg" class="absolute-img">
+			<div id="coral1">
+				<img src="coral1.gif" alt="animated coral" class="absolute-img">
 			</div>
-			<div class="text-box" id="Ford-text">
-				<img src="./images/text_box.svg" class="absolute-img">
-				Ford Motor Company
+			<div id="shelf1">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1248 1340.17"><defs><radialGradient id="radial-gradientf" cx="1231.06" cy="1295.89" r="1194.11" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#446763"/><stop offset="0.49" stop-color="#5a786d"/><stop offset="1" stop-color="#8c9f86"/></radialGradient></defs><polygon points="1248 10.91 1153.93 0 880.36 80.81 767 88.92 411.45 183.73 134 202.91 18 311.92 0 521.91 82 662.91 33.77 808.54 120.19 957.01 371.61 997.98 566 997.91 1248 1340.17 1248 10.91" style="fill:url(#radial-gradientf)"/></svg>
 			</div>
-			<div class="rock3">
-				<img src="./images/rock3.svg" class="absolute-img">
-				<div class="text-box" id="Freelance-text">
-					<img src="./images/text_box.svg" class="absolute-img">
-					Freelancing
-				</div>
-			</div> -->
+			<div id="shelf2">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1607.54 1312.63"><defs><radialGradient id="radial-gradientg" cx="1263.94" cy="1230.68" r="1967.3" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#446763"/><stop offset="0.49" stop-color="#5a786d"/><stop offset="1" stop-color="#8c9f86"/></radialGradient></defs><polygon points="1607.54 0 970.76 142.52 320.89 264.99 186.13 409.29 138.38 513.18 0 701.36 36.57 842.22 125.35 991.34 170.73 1096.3 495.61 1117.64 1605.63 1312.63 1607.54 0" style="fill:url(#radial-gradientg)"/></svg>
+			</div>
+			<div id="shelf3">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1279.54 835.38"><defs><radialGradient id="radial-gradienth" cx="217.98" cy="567.92" r="3589.05" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#446763"/><stop offset="0.49" stop-color="#5a786d"/><stop offset="1" stop-color="#8c9f86"/></radialGradient></defs><polygon points="1279.55 0 272.25 86.69 0 329.04 40.62 499.56 214.91 570.47 476.96 532.59 529.82 530.51 619.52 574.93 976.67 612.1 1279.55 835.38 1279.55 0" style="fill:url(#radial-gradienth)"/></svg>
+			</div>
+			<div id="coral2">
+				<img src="coral2.gif" alt="animated coral" class="absolute-img">
+			</div>
+			<div id="shelf4">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1301 1244"><defs><radialGradient id="radial-gradienti" cx="97.5" cy="741.05" r="1206.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#446763"/><stop offset="0.49" stop-color="#5a786d"/><stop offset="1" stop-color="#8c9f86"/></radialGradient></defs><polygon points="0 0 75.81 21.11 703.97 0 1285 57 1301 106.54 1063.28 445.52 922 547 536 838 407.7 1244 389.15 906.45 293.28 829 92.63 845.87 0 917 0 0" style="fill:url(#radial-gradienti)"/></svg>
+			</div>
+			<div id="shelf5">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1390.91 856.73"><defs><radialGradient id="radial-gradientj" cx="652.92" cy="795.47" r="1010.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#446763"/><stop offset="0.49" stop-color="#5a786d"/></radialGradient></defs><polygon points="4 0 277.73 25.48 690.48 0 869.76 103.2 1146.86 133.3 1309.04 229.17 1301 309.17 1390.91 488.42 1326.38 563.18 1225.94 640.12 1076.55 655.52 981.29 662.37 832.27 769.23 753.57 804.21 589.29 856.73 359.36 810.7 127.31 810.7 0 837.78 4 0" style="fill:url(#radial-gradientj)"/></svg>
+			</div>
+			<div id="shelf6">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1537.59 937.3"><defs><radialGradient id="radial-gradientk" cx="813.31" cy="874.7" r="2177.53" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#446763"/><stop offset="0.49" stop-color="#5a786d"/><stop offset="1" stop-color="#8c9f86"/></radialGradient></defs><polyline points="7.51 0 1271.93 12.97 1464.08 79.64 1486.88 285.58 1537.59 402.77 1389.14 672.41 1263.72 672.41 1121.85 744.87 1014.62 757.99 830.99 937.3 839.78 788.6 411.03 755.82 101.26 701.13 0 709.88" style="fill:url(#radial-gradientk)"/></svg>
+			</div>
+			<div id="coral3">
+				<img src="coral3.gif" alt="animated coral" class="absolute-img">
+			</div>
+			<div id="shelf7">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1494 1368.69"><defs><radialGradient id="radial-gradientl" cx="1409.25" cy="1260.27" r="2253.38" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#446763"/><stop offset="0.26" stop-color="#5a786d"/><stop offset="1" stop-color="#8c9f86"/></radialGradient></defs><polygon points="1494 0 1248.28 30.36 1113 114 929 153 457 276 164.96 197.62 0 567 78.86 1149.28 122 1293 293.42 1351.29 517.24 1264.57 953.69 1233.9 1236.9 1368.69 1494 1355 1494 0" style="fill:url(#radial-gradientl)"/></svg>
+			</div>
+			<div id="shelf8">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1635.68 1209.99"><defs><radialGradient id="radial-gradientm" cx="1620.52" cy="1091.3" r="1671.42" gradientUnits="userSpaceOnUse"><stop offset="0.12" stop-color="#446763"/><stop offset="0.79" stop-color="#5a786d"/><stop offset="1" stop-color="#8c9f86"/></radialGradient></defs><polygon points="1635.68 0 74.59 456.62 0 596.98 71.04 723.51 43.45 904.27 110.41 1009.11 380.38 1146.49 573.91 1209.99 740.53 1164.57 868.16 1153.72 1012.68 1016.34 1629.68 1099.49 1635.68 0" style="fill:url(#radial-gradientm)"/></svg>
+			</div>
+			<div id="shelf9">
+				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1618.25 1130.85"><defs><radialGradient id="radial-gradientn" cx="320.31" cy="1048.22" r="3047.68" gradientUnits="userSpaceOnUse"><stop offset="0.35" stop-color="#446763"/><stop offset="0.59" stop-color="#5f7c70"/><stop offset="1" stop-color="#8c9f86"/></radialGradient></defs><polygon points="1595.23 0 0 751.5 122.26 901.23 97.57 995.64 267.03 1082.02 433 1130.85 694.75 1078.27 957.82 1048.22 1209.88 1025.68 1618.25 964.14 1596.87 717.69 1595.23 0" style="fill:url(#radial-gradientn)"/></svg>
+			</div>
 		</div>
 		
 	</div>
 
 </body>
-<!-- <script type="module" src="js/index.js"></script> -->
+<script src="js/svg4everybody.js"></script>
+<script>svg4everybody();</script>
+<script type="module" src="js/index.js"></script>
 </html>

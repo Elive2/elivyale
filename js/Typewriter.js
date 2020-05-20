@@ -81,7 +81,7 @@ export default class Typewriter extends Animator {
 
 	//called every frame, chars to draw are determined by intervals
 	drawChars() {
-		this._ctx.fillStyle = "black"
+		this._ctx.fillStyle = "white"
 		this._ctx.fillText(this._chars, 20, 30);
 		//cursorX = ctx.measureText(chars);
 		//console.log(ctx.measureText(chars))

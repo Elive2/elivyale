@@ -49,6 +49,7 @@ export default class ParallaxAnimation extends Animator {
 	}
 
 	update(scrollPercent) {
+		//console.log("scroll percent" + scrollPercent);
 		if(scrollPercent <= this._startPercent) {
 			//the element should not start moving yet
 			//so assign it the inital position
