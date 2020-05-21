@@ -1,3 +1,16 @@
+/*
+* File: Animator.js
+*
+* Description: This is the Parent Class that all specific animations will
+* Inherit from. I am still in the process of determining what properties
+* and methods I want all my js animations to share. This class is incomplete.
+* Pleas view ParallaxAnimation.js or Typewriter.js for completed animation
+* classes
+*
+*
+*
+*/
+
 export default class Animator {
 	constructor(name) {
 		this._name = name;

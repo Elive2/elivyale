@@ -1,43 +1,33 @@
 /*
 * File: index.js
 *
+* Author: Eli Yale
+*
+* Date Modified: 05/20/2020
+*
 * Description: main js file that has the principal
 * animation/draw loop. Sepcialized animations are 
 * imported from other files. All dom collecting is done
-* in this file, ie none should be called in classes
+* in this file, ie none should be called in classes.
+*
+* Outline: 
+* 1) intantiate animator classes for each element to animate
+* 2) Main draw loop is called with window.requestAnimationFrame
+* 3) Draw Loop updates all animated elements
+* 4) Then Draw Loop redraws all necessary elements
+* 5) Some elements such as css transforms don't need redraws
 *
 */
 
 import Typewriter from './Typewriter.js'
 import ParallaxAnimation from './ParallaxAnimation.js'
 
-function loadSprites()
-{
-    var xmlFile="sprites.xml"
-    var loadXML = new XMLHttpRequest;
-    loadXML.onload = callback;
-    loadXML.open("GET", xmlFile, true);
-    loadXML.send();
-    function callback()
-    {
-        //---responseText---
-        var xmlString=loadXML.responseText
-        //---DOMParser---
-        var parser = new DOMParser();
-        var mySpritesDoc=parser.parseFromString(xmlString,"text/xml").documentElement ;
-        var addSprites=mySpritesDoc.childNodes
-        for(var k=0;k<addSprites.length;k++)
-        {
-           var sprite=addSprites.item(k).cloneNode(true)
-           document.getElementById("spriteDefs").appendChild(sprite)
-        }
-    }
-}
 
-//parallax variables
+//parallax variables track current scroll values
 var scrollOffset = 0;
 var scrollPercent = 0;
 var scrollHeight = 0;
+
 //all animations are contained within the svg container
 var containerHeight = document.getElementById("svg-container").offsetHeight;
 var viewWidth = window.innerWidth;
@@ -166,7 +156,6 @@ const parallaxShelf9 = new ParallaxAnimation("shelf9", shelf9El,
 function draw() {
 	scrollOffset = window.pageYOffset || window.scrollTop;
   	scrollPercent = scrollOffset/scrollHeight || 0;
-  	//console.log("scroll percent" + scrollPercent);
 
 	/**********updates**********/
 	typewriter.update();

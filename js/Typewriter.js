@@ -6,7 +6,7 @@
 *
 * Description: This file contains the Typewriter class
 * which is a simple animation to create a typewriter effect
-* including typing and deleting words with a blkingin cursor
+* including typing and deleting words with a blinking cursor
 * and enclosing brackets. The class needs an html canvas to attach
 * to which is passed into this constructor. You can modify the type
 * and delete speeds and cursor speeds, and you can set what words

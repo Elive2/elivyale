@@ -11,6 +11,11 @@
 * takes several parameters to describe the motion in the constructor,
 * see the function for more info. The scroll percentage most be passed
 * to the update function.
+*
+* Todo: 
+* [ ] - Add linear Interpretation to smooth out the animations
+* [ ] - pass in a function for nonlinear animation
+* 
 */
 
 import Animator from './Animator.js'
@@ -47,6 +52,8 @@ export default class ParallaxAnimation extends Animator {
 		this._element.style['left'] = (startX * 100) + '%';
 
 	}
+
+/*********************Overrides********************/
 
 	update(scrollPercent) {
 		//console.log("scroll percent" + scrollPercent);
