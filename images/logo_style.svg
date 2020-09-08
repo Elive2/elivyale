@@ -1,0 +1,23 @@
+<svg width="10%" height="10%" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+	<style type="text/css">
+		.path {
+			stroke-dasharray: 50;
+			stroke-dashoffset: 50;
+			animation: dash 7s linear forwards;
+		}
+
+		@keyframes dash {
+			to {
+				stroke-dashoffset: 0;
+			}
+		}
+	</style>
+	<path class="path" d="M1.694,3.991c-0.604,-0.587 0.798,-2.596 0.798,-2.596l-0.09,-0.179c0,0 -1.751,2.409 -0.708,2.775c0.118,0.041 0.27,0.057 0.465,0.04c0.259,-0.022 0.539,-0.054 0.455,-0.038c-0.317,0.061 -0.774,0.493 -1.167,1.046c-0.959,1.35 -1.542,3.418 1.197,2.565c4.035,-1.257 7.825,-2.137 7.825,-2.137l-7.79,1.961c-0.74,0.208 -3.588,0.913 -0.693,-2.98c0.106,-0.142 0.246,-0.281 0.367,-0.435" style="fill:none;stroke:#000;stroke-width:0.2px;"/>
+	<path class="path" d="M5.332,1.216l0.131,0.087c0.007,0.221 -0.962,2.491 -0.501,3.079" style="fill:none;stroke:#000;stroke-width:0.2px;"/>
+	<path class="path" d="M5.312,1.216c0,0 -1.128,3.414 -0.007,3.294c2.079,-0.222 3.177,-3.367 3.506,-2.934c0.328,0.433 -7.611,12.59 -3.882,9.098c3.73,-3.492 7.074,-9.015 6.271,-9.458c-0.803,-0.443 -4.692,-1.004 -9.592,-0.679" style="fill:none;stroke:#000;stroke-width:0.2px;"/>
+	<path class="path" d="M5.198,4.51c0.898,-0.031 2.142,-1.241 2.995,-2.392c0.44,-0.596 0.498,-0.582 0.542,-0.582" style="fill:none;stroke:#000;stroke-width:0.2px;"/>
+	<path class="path" d="M4.217,10.301c-1.605,3.252 4.216,-2.072 7.073,-8.584" style="fill:none;stroke:#000;stroke-width:0.2px;"/>
+	<path lass="path" d="M1.608,0.54c-0.251,-0.182 9.266,0.183 9.64,0.723" style="fill:none;stroke:#000;stroke-width:0.2px;"/>
+	<path class="path" d="M8.735,1.925l-1.746,3.333l-2.772,5.043" style="fill:none;stroke:#000;stroke-width:0.2px;"/>
+	<path class="path" d="M8.735,9.862c0,0 1.467,-0.567 2.089,-1.632" style="fill:none;"/>
+</svg>

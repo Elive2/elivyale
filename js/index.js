@@ -39,23 +39,27 @@ var viewHeight = window.innerHeight;
 //	startPercent, startX, startY, endPercent, endX, endY, containerHeight, viewWidth)
 const typewriterCanvas = document.getElementById("typewriter"); 
 const words = ["Climber", "Skier", "Musician", "Diver", "slackliner"];
-const typewriter = new Typewriter(typewriterCanvas, "25px Georgia", words, 250, 150, 500);
+const typewriter = new Typewriter(typewriterCanvas, "25px Georgia", words, 250, 150, 500, "#000000");
+
+const sunEl = document.getElementById("sun");
+const parallaxSun = new ParallaxAnimation("sun", sunEl,
+	0.060, 0.60, 0.09, 0.065, 0.60, -0.4, containerHeight, viewWidth);
 
 const mountains1El = document.getElementById("mountains1");
 const parallaxMountains1 = new ParallaxAnimation("mountains1", mountains1El,
-	0.035, 0, 0.065, 0.099, 0.0, 1.22, containerHeight, viewWidth);
+	0.025, 0.25, 0.035, 0.065, 0.25, 2.5, containerHeight, viewWidth);
 
 const mountains2El = document.getElementById("mountains2");
 const parallaxMountains2 = new ParallaxAnimation("mountains2", mountains2El,
-	0.035, 0, 0.070, 0.075, 0.0, 0.95, containerHeight, viewWidth);
+	0.025, 0.25, 0.037, 0.065, 0.25, 2.8, containerHeight, viewWidth);
 
 const mountains3El = document.getElementById("mountains3");
 const parallaxMountains3 = new ParallaxAnimation("mountains3", mountains3El,
-	0.035, 0, 0.097, 0.075, 0.0, 1.4, containerHeight, viewWidth);
+	0.025, 0.25, 0.047, 0.065, 0.25, 3.8, containerHeight, viewWidth);
 
 const lakeEl = document.getElementById("lake");
 const parallaxLake = new ParallaxAnimation("lake", lakeEl,
-	0.035, 0, 0.099, 0.075, 0.0, 1.0, containerHeight, viewWidth);
+	0.025, 0.25, 0.056, 0.067, 0.25, 2.75, containerHeight, viewWidth);
 
 const riverEl = document.getElementById("river");
 const parallaxRiver = new ParallaxAnimation("river", riverEl,
@@ -161,6 +165,7 @@ function draw() {
 	typewriter.update();
 
 	//ParralxAnimation update methods changes css so no draw is necessary
+	parallaxSun.update(scrollPercent);
 	parallaxMountains1.update(scrollPercent);
 	parallaxMountains2.update(scrollPercent);
 	parallaxMountains3.update(scrollPercent);
