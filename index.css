@@ -158,13 +158,22 @@ html {
 	position: relative;
 	top: 0px;
 	left: 0px;
-	height: 12851px;
+	height: 13000px;
 	overflow: hidden;
+}
+
+#vectors {
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	position: absolute;
 }
 
 #background {
 	width: 100vw;
-	height: 12851px;
+	height: 13000px;
 }
 
 #sun {
@@ -575,7 +584,10 @@ of trees
 /*********************Media Queries****************************/
 @media screen and (max-width: 997px) {
 	#background {
-		height: initial;
+		height: 1300vw;
+	}
+	#svg-container {
+		height: 1300vw;
 	}
 	#mountains1 {
 		width: 95vw;
