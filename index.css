@@ -38,9 +38,11 @@ img {
 	width: 100%;
 	height: 100%;
 }
+
 html {
 	scroll-behavior: smooth;
 }
+
 
 .logo-wrapper {
 	position: absolute;
@@ -49,6 +51,36 @@ html {
 	z-index: 1;
 	width: 5vw;
 	height: 5vw;
+}
+
+/***************************Nav Bar***************************/
+.navbar {
+	overflow: hidden;
+	float: right;
+}
+
+.navbar a {
+	float: left;
+	display: block;
+	color: #8d7d82;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 29px;
+}
+
+.navbar a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.navbar a.active {
+	background-color: #8db4b9;
+	color: white;
+}
+
+.navbar .icon {
+	display: none;
 }
 
 /**************************Content Section********************/
@@ -80,7 +112,7 @@ html {
 	z-index: 1;
 	position: absolute;
 	left: 50%;
-	top: 4.2%;
+	top: 4.0%;
 	transform: translate(-50%,0);
 
 }
@@ -99,7 +131,7 @@ html {
 	z-index: 0;
 	left: 50%;
 	transform: translate(-50%, 0);
-	top: 7.0%;
+	top: 4.6%;
 	/*transform: translate(-50%, 330%);*/
 	width: 45vw;
 	position: absolute;
@@ -112,8 +144,8 @@ html {
 	position: absolute;
 	z-index: 3;
 	position: absolute;
-	left: 35vw;
-	top: 21%;
+	left: 75vw;
+	top: 18%;
 	width: 20vw;
 }
 
@@ -123,114 +155,124 @@ html {
 
 #svg-container {
 	width: 100vw;
-	height: auto;
-	overflow: hidden;
-}
-
-.background-gradient {
-	z-index: 0;
 	position: relative;
 	top: 0px;
 	left: 0px;
-	/*background-image: url(images/background-gradient.svg);
-	background-repeat: no-repeat;*/
+	height: 12851px;
+	overflow: hidden;
+}
+
+#background {
 	width: 100vw;
+	height: 12851px;
 }
 
 #sun {
-	z-index: 1;
+	z-index: 3;
 	position: absolute;
-	top: 5.3%;
-	left: 60%;
+	top: 5.8%;
+	left: 56%;
+	width: 10vw;
+}
+
+#contact-button {
+	z-index: 50;
+	position: absolute;
+	top: 5.8%;
+	left: 56%;
 	width: 10vw;
 }
 
 #mountains1 {
-	z-index: 2;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
 	position: absolute;
-	top: 3.5%;
-	left: 25%;
-	width: 50vw;
-	height: 10vw;
-
+	top: 6.1%;
+	width: 960px;
 }
 
 #mountains2 {
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
 	z-index: 3;
 	position: absolute;
-	top: 4.0%;
-	left: 25%;
-	width: 50vw;
-	height: 10vw;
+	top: 6.6%;
+	width: 960px;
 }
 
 #mountains3 {
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
 	z-index: 4;
 	position: absolute;
-	top: 5.0%;
-	left: 25%;
-	width: 50vw;
-	height: 7vw;
+	top: 8.2%;
+	width: 960px;
 }
 
 #lake {
 	z-index: 3;
 	position: absolute;
-	top: 6.0%;
+	top: 5.8%;
 	width: 50vw;
-	height: 10vw;
 	left: 25%;
 }
 
-#cliff1 {
+#cliff {
 	z-index: 2;
 	position: absolute;
-	top: 15.5%;
-	left: 0px;
-	width: 77vw;
+	top: 7.3%;
+	left: 25%;
+	width: 50vw;
 }
 
-#cliff2 {
+#pond {
 	z-index: 2;
 	position: absolute;
-	top: 15.5%;
-	right: 0px;
-	width: 35vw;
+	top: 11.7%;
+	left: 39%;
+	width: 29vw;
 }
 
-/*#waterfall {
-	z-index: 2;
+#waterfall {
+	z-index: 3;
 	position: absolute;
-	top: 16.2%;
-	left: 58%;
-	width: 10vw;
-	height: 700px;
-}*/
+	top: 10.49%;
+	left: 46.5%;
+	width: 18vw;
+}
+
 
 #river {
 	z-index: 3;
 	position: absolute;
-	/*0.3% is just right for final pos*/
-	top: 20%; 
-	width: 100vw;
+	top: 13.5%;
+	left: -64%;
+	width: 227vw;
 }
 
-#trees1 {
+#tree1 {
 	z-index: 3;
 	position: absolute;
-	top: 15.2%;
-	left: -12%;
-	width: 75vw;
-	height: 700px;
+	top: 11.2%;
+	left: 34%;
+	width: 12vw;
 }
 
-#trees2 {
+#tree2 {
 	z-index: 3;
 	position: absolute;
-	left: -10%;
-	top: 15.8%;
-	width: 65vw;
-	height: 700px;
+	top: 10.2%;
+	left: 37%;
+	width: 15vw;
 }
 
 /*Try ditching Z index after animating, maybe there
@@ -238,60 +280,60 @@ is a z-index embedded in the svg. I want trees to blend
 together nicely. Might need to export smaller groups
 of trees
 */
-#trees3 {
+#tree3 {
 	z-index: 3;
 	position: absolute;
-	top: 17%;
-	left: -17vw;
-	width: 68vw;
-	height: 700px;
-
+	top: 9.8%;
+	left: 44%;
+	width: 12vw;
 }
 
-#trees4 {
-	z-index: 3;
+#tree4 {
+	z-index: 2;
 	position: absolute;
-	right: -19%;
-	top: 16%;
-	width: 50vw;
-	height: 700px;
-	object-fit: cover;
+	top: 10.9%;
+	left: 57%;
+	width: 13vw;
 }
 
-#trees5 {
-	z-index: 3;
+#tree5 {
+	z-index: 2;
 	position: absolute;
-	right: -20%;
-	top: 16.5%;
-	width: 45vw;
-	height: 700px;
+	top: 10.9%;
+	left: 60%;
+	width: 14vw;
 }
 
-#trees6 {
-	z-index: 3;
+#tree6 {
+	z-index: 2;
 	position: absolute;
-	right: -25vw;
-	top: 17.5%;
-	width: 45vw;
-	height: 700px;
+	top: 11.5%;
+	left: 65%;
+	width: 14vw;
 }
 
-#trees7 {
-	z-index: 3;
+#tree7 {
+	z-index: 2;
 	position: absolute;
-	right: 10vw;
-	top: 28.7%;
-	width: 20vw;
-	height: 700px;
+	top: 14.5%;
+	left: 32%;
+	width: 14vw;
 }
 
-#trees8 {
-	z-index: 3;
+#tree8 {
+	z-index: 2;
 	position: absolute;
-	left: 58%;
-	top: 28.5%;
-	width: 25vw;
-	height: 700px;
+	top: 13.9%;
+	left: 39%;
+	width: 15vw;
+}
+
+#tree9 {
+	z-index: 2;
+	position: absolute;
+	top: 13.9%;
+	left: 47%;
+	width: 11vw;
 }
 
 #experience {
@@ -302,37 +344,61 @@ of trees
 	width: 20vw;
 }
 
-#cisco {
+#freelance {
 	z-index: 3;
 	position: absolute;
-	left: 5vw;
-	top: 25%;
-	width: 45vw;
+	left: 55%;
+	top: 20%;
+	width: 35vw;
 }
+
+#tree10 {
+	z-index: 2;
+	position: absolute;
+	top: 22%;
+	left: 15%;
+	width: 11vw;
+}
+
+#tree11 {
+	z-index: 2;
+	position: absolute;
+	top: 23%;
+	left: 9%;
+	width: 11vw;
+}
+
 
 #ford {
 	z-index: 3;
 	position: absolute;
-	right: 5vw;
-	top: 33.5%;
-	width: 45vw;
+	left: 55%;
+	top: 30%;
+	width: 35vw;
 }
 
-#trees8 {
-	z-index: 3;
+#tree12 {
+	z-index: 2;
 	position: absolute;
-	left: 18%;
-	top: 38.5%;
-	width: 25vw;
-	height: 700px;
+	top: 29%;
+	left: 35%;
+	width: 10vw;
 }
 
-#freelance {
+#tree13 {
+	z-index: 2;
+	position: absolute;
+	top: 30%;
+	left: 39%;
+	width: 11vw;
+}
+
+#cisco {
 	z-index: 3;
 	position: absolute;
-	left: 5vw;
+	left: 55%;
 	top: 40.5%;
-	width: 45vw;
+	width: 35vw;
 }
 
 #projects {
@@ -343,100 +409,101 @@ of trees
 	width: 20vw;
 }
 
-#coral1 {
+#coralgroup1 {
 	z-index: 6;
 	position: absolute;
-	right: 0px;
-	top: 61.9%;
-	width: 45vw;
+	right: 2.2%;
+	top: 56.3%;
+	width: 20vw;
 }
 
-#shelf1 {
+#sand1 {
 	z-index: 5;
 	position: absolute;
-	right: 0px;
-	top: 61.5%;
-	width: 45vw;
+	right: 2%;
+	top: 56.75%;
+	width: 20vw;
 }
 
-#shelf2 {
+
+#shelf1 {
 	z-index: 4;
 	position: absolute;
 	right: 0px;
-	top: 62%;
-	width: 55vw;
+	top: 57%;
+	width: 25vw;
 }
 
-#shelf3 {
+#shelf2 {
 	z-index: 3;
 	position: absolute;
 	right: 0px;
-	top: 65%;
-	width: 45vw;
+	top: 57.2%;
+	width: 24vw;
 }
 
-#coral2 {
+#coralgroup2 {
 	z-index: 6;
 	position: absolute;
-	left: 0px;
-	top: 74.9%;
-	width: 45vw;
+	right: 2.2%;
+	top: 64.3%;
+	width: 20vw;
+}
+
+#sand2 {
+	z-index: 5;
+	position: absolute;
+	right: 3%;
+	top: 64.7%;
+	width: 20vw;
+}
+
+#shelf3 {
+	z-index: 4;
+	position: absolute;
+	right: 0px;
+	top: 65%;
+	width: 25vw;
 }
 
 #shelf4 {
+	z-index: 3;
+	position: absolute;
+	right: 0px;
+	top: 65.2%;
+	width: 25vw;
+}
+
+#coralgroup3 {
+	z-index: 6;
+	position: absolute;
+	right: 1%;
+	top: 74%;
+	width: 20vw;
+}
+
+#sand3 {
 	z-index: 5;
 	position: absolute;
-	left: 0px;
-	top: 74.5%;
-	width: 45vw;
+	right: 10px;
+	top: 74.44%;
+	width: 20vw;
 }
 
 #shelf5 {
 	z-index: 4;
 	position: absolute;
-	left: 0px;
-	top: 75.5%;
-	width: 45vw;
+	right: 0px;
+	top: 75.0%;
+	width: 25vw;
 }
 
 #shelf6 {
 	z-index: 3;
 	position: absolute;
-	left: 0px;
-	top: 76.5%;
-	width: 45vw;
-}
-
-#coral3 {
-	z-index: 6;
-	position: absolute;
 	right: 0px;
-	top: 84.1%;
-	width: 45vw;
-}
-
-#shelf7 {
-	z-index: 5;
-	position: absolute;
-	right: 0px;
-	top: 84%;
-	width: 45vw;
-}
-
-#shelf8 {
-	z-index: 4;
-	position: absolute;
-	right: 0px;
-	top: 86%;
-	width: 45vw;
-}
-
-#shelf9 {
-	z-index: 3;
-	position: absolute;
-	right: 0px;
-	top: 88%;
-	width: 35vw;
+	top: 75.2%;
+	width: 25vw;
 }
 
 
@@ -472,7 +539,7 @@ of trees
 }
 
 .normal-text {
-	font-size: 1.5vw;
+	font-size: 29px;
 	padding: 0px;
 	margin: 0px;
 }
@@ -495,8 +562,43 @@ of trees
 	color: #000000;
 }
 
+.body-gray {
+	color: #969696;
+}
+
 /**********************Fonts***********************************/
 
 .quicksand {
 	font-family: 'Quicksand', sans-serif;
+}
+
+/*********************Media Queries****************************/
+@media screen and (max-width: 997px) {
+	#background {
+		height: initial;
+	}
+	#mountains1 {
+		width: 95vw;
+		left: 0%;
+		right: initial;
+		display: initial;
+		margin-left: initial;
+		margin-right: initial;
+	}
+	#mountains2 {
+		width: 95vw;
+		left: 0%;
+		right: initial;
+		display: initial;
+		margin: initial;
+		margin-right: initial;
+	}
+	#mountains3 {
+		width: 95vw;
+		left: 0%;
+		right: initial;
+		display: initial;
+		margin: initial;
+		margin-right: initial;
+	}
 }

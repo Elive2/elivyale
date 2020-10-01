@@ -19,8 +19,8 @@
 *
 */
 
-import Typewriter from './Typewriter.js'
-import ParallaxAnimation from './ParallaxAnimation.js'
+import Typewriter from './Typewriter.js';
+import ParallaxAnimation from './ParallaxAnimation.js';
 
 
 //parallax variables track current scroll values
@@ -208,12 +208,15 @@ function resize() {
 	viewHeight = window.innerHeight;
 	scrollHeight = containerHeight-viewHeight;
 }
+function repos() {
+	document.getElementById("about-wrapper").style.top = "7.0%";
+}
 
 window.addEventListener('resize', resize);
 
 document.addEventListener('DOMContentLoaded', function() {
 	resize();
+	repos();
 	typewriter.start();
 	draw();
 })
-

@@ -50,6 +50,7 @@ export default class ParallaxAnimation extends Animator {
 		console.log((startY * 100).toFixed(2) + '%');
 		this._element.style['top'] = (startY * 100) + '%';
 		this._element.style['left'] = (startX * 100) + '%';
+		this._element.style['transition'] = '.05s ease-in';
 
 	}
 

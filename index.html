@@ -59,161 +59,240 @@ EXTRA:
 	<!-- <link rel="icon" href="images/svg_sprites.svg" type="image/svg+xml"> -->
 	<!-- <link rel="import" href="./images/svg_sprites.svg"> -->
 	<!-- <object type="image/svg+xml" data="/images/svg_sprites.svg" style="display:none"></object> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+	<div class="navbar">
+		<a href="#experience-jump-point">Experience</a>
+		<a href="#portfolio">Portfolio</a>
+		<a href="#writing">Writing</a>
+		<a href="#fun">Fun</a>
+		<a href="javascript:void(0);" class="icon" onclick="setActive()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
 	<div id="svg-container">
-		<div class="background-gradient">
 			<!-- <img src="./images/gradient.svg" class="absolute-img"> -->
-			<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 13000"><defs><linearGradient id="linear-gradient" x1="5843.78" y1="10718.47" x2="5843.78" y2="1027.69" gradientTransform="matrix(0.55, 0, 0, -0.55, -2231.22, 12513.07)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#98bdc5"/><stop offset="0.8" stop-color="#397f91"/></linearGradient></defs><rect x="0.27" y="6841.46" width="1920" height="6158.54" style="fill:url(#linear-gradient)"/><rect x="-758.47" y="11135.32" width="818.29" height="600.14" style="fill:none"/><rect width="1920" height="6841" style="fill:#fff"/></svg>
+			<svg id="background" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 13000"><defs><linearGradient id="linear-gradient" x1="5843.78" y1="12091.76" x2="5843.78" y2="1254.71" gradientTransform="matrix(0.55, 0, 0, -0.55, -2231.22, 12513.07)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8db4b9"/><stop offset="0.8" stop-color="#397f91"/></linearGradient></defs><rect x="0.27" y="6113" width="1920" height="6887" style="fill:url(#linear-gradient)"/><rect y="22" width="1920" height="6091" style="fill:#fff"/><text/></svg>
 			<div class="logo-wrapper">
 				<a href="#"><img src="images/logo_style.svg" class="absolute-img"></a>
 			</div>
-			<div class="grabber huge-text forest-green">
+			<h1 class="grabber huge-text forest-green">
 				Eli's Adventure
-			</div>
+			</h1>
 			<div class="typewriter-wrapper">
 				<canvas width="150" height="40" id="typewriter"></canvas>
 			</div>
-			<div class="blurb-wrapper normal-text body-black">
+			<div class="blurb-wrapper normal-text body-gray">
 				Hi I'm Eli Vincent Yale. Full Stack Computer Engineer based in Truckee CA. 
 			</div>
 			<div class="about-jump-point big-text white">
 			</div>
-			<div class="about-wrapper normal-text white">
-				I design, create, and build systems, end to end. SCU educated, constantly learning.<br><br>
+			<div class="about-wrapper normal-text body-gray">
+				I design, create, and build systems, end to end. My focus is web with python and javascript. <br><br>
 				I am open to full time opportunities and freelance work. If you want to build something cool..
 			</div>
 			<div id="sun">
-				
-					<svg viewBox="0 0 100 100">
-						<a xlink:href="http://google.com">
+					<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 						<use href="./sprites/sprite_sheet.svg#sun-sprite"></use>
-						</a>
+						
 					</svg>
-				
 			</div>
-			<div id="mountains1">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#mountains1-sprite"></use>
-				</svg>
-				
-			</div>
-			<div id="mountains2">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#mountains2-sprite"></use>
+			<div id="contact-button">
+				<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+					<a href="https://google.com" target="_blank">
+						<circle cx="50%" cy="50%" r="25%" style="fill:#f4a63a; z-index: 50; opacity: 0.0"/>
+					</a>
 				</svg>
 			</div>
-			<div id="mountains3">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#mountains3-sprite"></use>
-				</svg>
-			</div>
+			<svg id="mountains1" viewBox="0 0 1350.41 363.88">
+				<use href="./sprites/sprite_sheet.svg#mountains1-sprite"></use>
+			</svg>
+			<svg id="mountains2" viewBox="0 0 1301.25 373.33">
+				<use href="./sprites/sprite_sheet.svg#mountains2-sprite"></use>
+			</svg>
+			<svg id="mountains3" viewBox="0 0 1321.25 141.04">
+				<use href="./sprites/sprite_sheet.svg#mountains3-sprite"></use>
+			</svg>
 			<div id="lake">
 				<!-- Stupid chrome gradient bug -->
 				<svg viewBox="0 0 100 100">
 					<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1332.63 390.91"><defs><radialGradient id="radial-gradient" cx="666.31" cy="195.46" r="491.01" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#80a6a9"/><stop offset="0.64" stop-color="#8db4b9"/><stop offset="1" stop-color="#98bdc6"/></radialGradient></defs><path d="M1229.66,303.87,873,381.82l-112.82,9.09,78-63.62,7.94-60.76c-45.75-23.77-128.28-58.34-234.81-58.33a497.73,497.73,0,0,0-128.4,16.93A795.47,795.47,0,0,1,301.43,259a799.27,799.27,0,0,1-258-24.7c-11-11.26-33.66-37.65-41.09-77.76C-11.1,83.84,37.11,29.15,43.45,22.19L68.83,6.49,1282.06,0c6,6.27,64.7,69.41,47.38,151.55-9,42.51-34.06,70.09-46.47,82C1275.13,251.94,1237.49,285.49,1229.66,303.87Z" style="fill:url(#radial-gradient)"/></svg>
 				</svg>
 			</div>
-			<div id="cliff1">
-				
+			<div id="cliff">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#cliff-sprite"></use>
+				</svg>
 			</div>
-			<div id="cliff2">
-				
+			<div id="pond">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#pond-sprite"></use>
+				</svg>
 			</div>
-			<!-- <div id="waterfall">
-				<img src="./images/waterfall.svg" class="absolute-img">
-			</div> -->
+			<div id="waterfall">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#waterfall-sprite"></use>
+				</svg>
+			</div>
 			<div id="river">
-				<img src="./images/river.svg" class="absolute-img">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#river-sprite"></use>
+				</svg>
 			</div>
-			<div id="trees1">
-				<img src="./images/trees1.svg" class="absolute-img">
+			<div id="tree1">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
 			</div>
-			<div id="trees2">
-				<img src="./images/trees2.svg" class="absolute-img">
+			<div id="tree2">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
 			</div>
-			<div id="trees3">
-				<img src="./images/trees3.svg" class="absolute-img">
+			<div id="tree3">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
 			</div>
-			<div id="trees4">
-				<img src="./images/trees4.svg" class="absolute-img">
+			<div id="tree4">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
 			</div>
-			<div id="trees5">
-				<img src="./images/trees5.svg" class="absolute-img">
+			<div id="tree5">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
 			</div>
-			<div id="trees6">
-				<img src="./images/trees6.svg" class="absolute-img">
+			<div id="tree6">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
 			</div>
-			<div class="big-text quicksand white experience-jump-point">
+			<div id="tree7">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
+			</div>
+			<div id="tree8">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
+			</div>
+			<div id="tree9">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
+			</div>
+			<div class="big-text quicksand forest-green experience-jump-point">
 				Experience
 			</div>
-			<div id="cisco" class="quicksand white">
-				<div class="med-text">Cisco Systems - Software Engineering Intern</div>
+			<div id="freelance" class="quicksand body-gray">
+				<div class="med-text">New World Wear - Freelance Web Developer</div>
 				<br>
 				<p class="normal-text">
-					This summer internship was my first experience in the software industry. I didn't know much about the level of quality and reliability that is expected from production software. When my first deadline and demo rolled around, I realized I had darastically underdelivered. My mentor told me to take a step back, take some time to review tutorials and really understand the Xcode frameworks. He said to give him a realistic date for the next demo. After accepting this important lesson, making sure i understood my technologies, and working dilligently and methodically, I delivered a quality demo by the next deadline and ended up with a corwd favorite final presentation. These lessons were important but I still had a long way to go.
+					As the first contrator of this early stage ecommerce company, I served as a goto for all things technical. I built and admined several websites. I designed many static and dynamic assets. And I helped expand and grow the team and business.
 				</p>
 			</div>
-			<div id="trees7">
-				<img src="./images/trees7.svg" class="absolute-img">
+			<div id="tree10">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
 			</div>
-			<div id="ford" class="quicksand white">
+			<div id="tree11">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
+			</div>
+			<div id="ford" class="quicksand body-gray">
 				<div class="med-text">Ford Motor Company - Advanced Engineering Intern</div>
 				<br>
 				<p class="normal-text">
-					For my second internship i was ready to hit the ground running. I knew my working style, pace and what I could accomplish in one summer. Whereas with Cisco I worked solo, at Ford I was part of a three man team including one other intern. 
+					Worked on a team of three in the Advanced Research Division. Developed a full stack geofencing web app from scratch. We lowered the real time geofencing delay from minutes to several seconds.
 				</p>
 			</div>
-			<div id="trees8">
-				<img src="./images/trees8.svg" class="absolute-img">
+			<div id="tree12">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
 			</div>
-			<div id="freelance" class="quicksand white">
-				<div class="med-text">Freelance Web Design and Development</div>
+			<div id="tree13">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+				</svg>
+			</div>
+			<div id="cisco" class="quicksand body-gray">
+				<div class="med-text">Cisco Systems</div>
 				<br>
 				<p class="normal-text">
-					After graduating I took some time to travel, read more about that here. During me journey through Europe I kept up on my studies exploring new web technologies, design tools, and some personal writing. After enjoying traveling so much and getting used to being productive on the road I decided it would be worth it to look into freelancing opportunities where I could work remotely. To add to my skill set I learned Adobe Illustrator, After Effect, and dabbled in Premier Pro. 
+					Built 2 iOS applications for the Campus Security Divison. Learned Xcode, LLDB, a bit of openCV, and how to deliver.
+
 				</p>
 			</div>
-			<div class="big-text quicksand white projects-jump-point" id="projects">
+			<div class="big-text quicksand body-white projects-jump-point" id="projects">
 				Projects
 			</div>
-			<div id="coral1">
-				<img src="coral1.gif" alt="animated coral" class="absolute-img">
+			<div id="coralgroup1">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#coralgroup1-sprite"></use>
+				</svg>
+			</div>
+			<div id="sand1">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#sand1-sprite"></use>
+				</svg>
 			</div>
 			<div id="shelf1">
-				
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#shelf1-sprite"></use>
+				</svg>
 			</div>
 			<div id="shelf2">
-				
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#shelf2-sprite"></use>
+				</svg>
+			</div>
+			<div id="coralgroup2">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#coralgroup2-sprite"></use>
+				</svg>
+			</div>
+			<div id="sand2">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#sand2-sprite"></use>
+				</svg>
 			</div>
 			<div id="shelf3">
-				
-			</div>
-			<div id="coral2">
-				<img src="coral2.gif" alt="animated coral" class="absolute-img">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#shelf3-sprite"></use>
+				</svg>
 			</div>
 			<div id="shelf4">
-				
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#shelf4-sprite"></use>
+				</svg>
+			</div>
+			<div id="coralgroup3">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#coralgroup3-sprite"></use>
+				</svg>
+			</div>
+			<div id="sand3">
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#sand3-sprite"></use>
+				</svg>
 			</div>
 			<div id="shelf5">
-				
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#shelf5-sprite"></use>
+				</svg>
 			</div>
 			<div id="shelf6">
-				
+				<svg viewBox="0 0 100 100">
+					<use href="./sprites/sprite_sheet.svg#shelf6-sprite"></use>
+				</svg>
 			</div>
-			<div id="coral3">
-				<img src="coral3.gif" alt="animated coral" class="absolute-img">
-			</div>
-			<div id="shelf7">
-				
-			</div>
-			<div id="shelf8">
-				
-			</div>
-			<div id="shelf9">
-				
-			</div>
-		</div>
 	</div>
 
 </body>
@@ -229,5 +308,5 @@ EXTRA:
   </script> -->
 <script src="js/svg4everybody.js"></script>
 <script>svg4everybody();</script>
-<script type="module" src="js/index.js"></script>
+<!-- <script type="module" src="js/index.js"></script> -->
 </html>
