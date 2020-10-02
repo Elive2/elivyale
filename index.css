@@ -158,6 +158,14 @@ html {
 	width: 960px;
 }
 
+.responsive-tree {
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	display: block;
+	position: absolute;
+}
+
 #svg-container {
 	width: 100vw;
 	position: relative;
@@ -210,23 +218,33 @@ html {
 
 #cliff {
 	z-index: 1;
-	top: 7.3%;
+	top: 9.0%;
 }
 
 #pond {
 	z-index: 2;
+	top: 12.1%;
+
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
 	position: absolute;
-	top: 11.7%;
-	left: 39%;
-	width: 29vw;
+	width: 560px;
 }
 
 #waterfall {
-	z-index: 3;
+	z-index: 2;
+	top: 10.5%;
+
+	left: 0;
+	right: 0;
+	margin-right: 0%;
+	margin-left: 48%;
+	display: block;
 	position: absolute;
-	top: 10.49%;
-	left: 46.5%;
-	width: 18vw;
+	width: 260px;
 }
 
 
@@ -240,10 +258,9 @@ html {
 
 #tree1 {
 	z-index: 3;
-	position: absolute;
-	top: 11.2%;
-	left: 34%;
-	width: 12vw;
+	top: 11%;
+	margin-left: 30%;
+	width: 160px;
 }
 
 #tree2 {
@@ -254,11 +271,6 @@ html {
 	width: 15vw;
 }
 
-/*Try ditching Z index after animating, maybe there
-is a z-index embedded in the svg. I want trees to blend
-together nicely. Might need to export smaller groups
-of trees
-*/
 #tree3 {
 	z-index: 3;
 	position: absolute;
@@ -605,4 +617,23 @@ of trees
 		margin: initial;
 		margin-right: initial;
 	}
+	#pond {
+		width: 55vw;
+		left: 23%;
+		right: initial;
+		display: initial;
+		margin-left: initial;
+		margin-right: initial;
+	}
+	#waterfall {
+		width: 25vw;
+		left: 45%;
+		right: initial;
+		margin-top: -0.2%;
+		display: initial;
+		margin-left: initial;
+		margin-right: initial;
+	}
+
+
 }
