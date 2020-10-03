@@ -162,6 +162,7 @@ html {
 	left: 0;
 	right: 0;
 	margin-right: auto;
+	margin-left: auto;
 	display: block;
 	position: absolute;
 }
@@ -224,27 +225,14 @@ html {
 #pond {
 	z-index: 2;
 	top: 12.1%;
-
-	left: 0;
-	right: 0;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	position: absolute;
 	width: 560px;
 }
 
 #waterfall {
 	z-index: 2;
 	top: 10.5%;
-
-	left: 0;
-	right: 0;
-	margin-right: 0%;
-	margin-left: 48%;
-	display: block;
-	position: absolute;
 	width: 260px;
+	padding-left: 200px;
 }
 
 
@@ -257,74 +245,66 @@ html {
 }
 
 #tree1 {
+	padding-right: 590px;
 	z-index: 3;
 	top: 11%;
-	margin-left: 30%;
 	width: 160px;
 }
 
 #tree2 {
+	padding-right: 10px;
 	z-index: 3;
-	position: absolute;
 	top: 10.2%;
-	left: 37%;
-	width: 15vw;
+	width: 120px;
 }
 
 #tree3 {
+	padding-right: 250px;
 	z-index: 3;
-	position: absolute;
 	top: 9.8%;
-	left: 44%;
-	width: 12vw;
+	width: 170px;
 }
 
 #tree4 {
+	padding-left: 500px;
 	z-index: 2;
-	position: absolute;
-	top: 10.9%;
-	left: 57%;
-	width: 13vw;
+	top: 10.3%;
+	width: 170px;
 }
 
 #tree5 {
+	padding-left: 750px;
 	z-index: 2;
-	position: absolute;
-	top: 10.9%;
-	left: 60%;
-	width: 14vw;
+	top: 10.0%;
+	width: 160px;
 }
 
 #tree6 {
+	padding-left: 800px;
 	z-index: 2;
-	position: absolute;
-	top: 11.5%;
-	left: 65%;
-	width: 14vw;
+	top: 12%;
+	width: 150px;
 }
 
 #tree7 {
+	padding-right: 225px;
 	z-index: 2;
-	position: absolute;
-	top: 14.5%;
-	left: 32%;
-	width: 14vw;
+	top: 14.4%;
+	width: 110px;
 }
 
 #tree8 {
+	padding-right: 45px;
 	z-index: 2;
-	position: absolute;
-	top: 13.9%;
-	left: 39%;
-	width: 15vw;
+	top: 14.4%;
+	width: 150px;
 }
 
 #tree9 {
+	padding-left: 155px;
 	z-index: 2;
-	position: absolute;
 	top: 13.9%;
-	left: 47%;
-	width: 11vw;
+	width: 130px;
 }
 
 #experience {
@@ -620,19 +600,57 @@ html {
 	#pond {
 		width: 55vw;
 		left: 23%;
-		right: initial;
-		display: initial;
-		margin-left: initial;
-		margin-right: initial;
 	}
 	#waterfall {
 		width: 25vw;
 		left: 45%;
-		right: initial;
+		padding-left: initial;
 		margin-top: -0.2%;
+	}
+	.responsive-tree {
+		left: initial;
+		right: initial;
 		display: initial;
-		margin-left: initial;
-		margin-right: initial;
+		margin: initial;
+		margin-right: initial !important;
+		padding-left: initial !important;
+		padding-right: initial;
+	}
+	#tree1 {
+		width: 15vw;
+		left: 13%;
+	}
+	#tree2 {
+		width: 12vw;
+		left: 40%;
+	}
+	#tree3 {
+		width: 16vw;
+		left: 28%;
+	}
+	#tree4 {
+		width: 15vw;
+		left: 65%;
+	}
+	#tree5 {
+		width: 16vw;
+		left: 78%;
+	}
+	#tree6 {
+		width: 13vw;
+		left: 83%;
+	}
+	#tree7 {
+		width: 11vw;
+		left: 34%;
+	}
+	#tree8 {
+		width: 15vw;
+		left: 42%;
+	}
+	#tree9 {
+		width: 13vw;
+		left: 52%;
 	}
 
 

@@ -17,7 +17,11 @@ TODO:
 	literally loads all svg independently with no speed issues, well a little
 	there is a loading animation at the start.
 [ ] ***Two Options 1) continue on this path with the mountains, or 2) 
-	migrate to giant SVG loaded once. 1) is more readable, keeps everything seperate for animation. With 2) I will need to go into the SVG's and add groups and Id to targer them for animation and I'm not even sure if that will work. With 1) I can pass them to an animator class like sway or parallax. But with 2) its less code in the HTML, would be easier to make the bulk svg responsive. 
+	migrate to giant SVG loaded once. 1) is more readable, keeps everything seperate for animation. With 2) I will need to go into the SVG's and add groups and Id to targer them for animation and I'm not even sure if that will work. With 1) I can pass them to an animator class like sway or parallax. But with 2) its less code in the HTML, would be easier to make the bulk svg responsive. this would be so much easier but it is harder to animate. when you <use> an SVG it gets created with a shadow root (closed) and you can't access anything inside of it with JS. See this forum https://greensock.com/forums/topic/17381-how-to-select-the-shadow-dom/ you have to do some weird workaround with CSS inheritance on the shadow host, but that looks ugly, see this forum https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
+
+		Here's a great example of the goal: https://www.youtube.com/watch?v=YcM4bRxtLcs
+
+		but she puts all the SVG code inside the html without <use>
 [ ] - write content
 [ ] - links to social and github
 [ ] - add footer
@@ -114,10 +118,10 @@ EXTRA:
 			<svg id="cliff" viewBox="0 0 1328.44 654.03" class="responsive-svg-centered">
 				<use href="./sprites/sprite_sheet.svg#cliff-sprite"></use>
 			</svg>
-			<svg id="pond" viewBox="0 0 579.78 391.38">
+			<svg id="pond" viewBox="0 0 579.78 391.38" class="responsive-svg-centered">
 				<use href="./sprites/sprite_sheet.svg#pond-sprite"></use>
 			</svg>
-			<svg id="waterfall" viewBox="0 0 429.21 456.3">
+			<svg id="waterfall" viewBox="0 0 429.21 456.3" class="responsive-svg-centered">
 				<use href="./sprites/sprite_sheet.svg#waterfall-sprite"></use>
 			</svg>
 			<div id="river">
@@ -128,46 +132,30 @@ EXTRA:
 			<svg id="tree1" viewBox="0 0 183.7 354.96" class="responsive-tree">
 				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
 			</svg>
-			<div id="tree2">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
-				</svg>
-			</div>
-			<div id="tree3">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
-				</svg>
-			</div>
-			<div id="tree4">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
-				</svg>
-			</div>
-			<div id="tree5">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
-				</svg>
-			</div>
-			<div id="tree6">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
-				</svg>
-			</div>
-			<div id="tree7">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
-				</svg>
-			</div>
-			<div id="tree8">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
-				</svg>
-			</div>
-			<div id="tree9">
-				<svg viewBox="0 0 100 100">
-					<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
-				</svg>
-			</div>
+			<svg id="tree2" viewBox="0 0 183.7 354.96" class="responsive-tree">
+				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+			</svg>
+			<svg id="tree3" viewBox="0 0 183.7 354.96" class="responsive-tree">
+				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+			</svg>
+			<svg id="tree4" viewBox="0 0 183.7 354.96" class="responsive-tree">
+				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+			</svg>
+			<svg id="tree5" viewBox="0 0 183.7 354.96" class="responsive-tree">
+				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+			</svg>
+			<svg id="tree6" viewBox="0 0 183.7 354.96" class="responsive-tree">
+				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+			</svg>
+			<svg id="tree7" viewBox="0 0 183.7 354.96" class="responsive-tree">
+				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+			</svg>
+			<svg id="tree8" viewBox="0 0 183.7 354.96" class="responsive-tree">
+				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+			</svg>
+			<svg id="tree9" viewBox="0 0 183.7 354.96" class="responsive-tree">
+				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
+			</svg>
 			<div class="big-text quicksand forest-green experience-jump-point">
 				Experience
 			</div>
