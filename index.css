@@ -237,11 +237,17 @@ html {
 
 
 #river {
-	z-index: 3;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
 	position: absolute;
+	width: 100%;
+	height: 4359.55px;
+
+	z-index: 3;
 	top: 13.5%;
-	left: -64%;
-	width: 227vw;
 }
 
 #tree1 {
@@ -615,6 +621,9 @@ html {
 		margin-right: initial !important;
 		padding-left: initial !important;
 		padding-right: initial;
+	}
+	#river {
+		height: 436vw;
 	}
 	#tree1 {
 		width: 15vw;
