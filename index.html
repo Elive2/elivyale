@@ -63,48 +63,42 @@ EXTRA:
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<div class="navbar" id="navbarID">
-		<a href="#experience-jump-point">Experience</a>
-		<a href="#portfolio">Portfolio</a>
-		<a href="#writing">Writing</a>
-		<a href="#fun">Fun</a>
-		<a href="javascript:void(0);" class="icon" onclick="menuClicked()">
-			<i class="fa fa-bars"></i>
-		</a>
+	<div id="Navigation" class="section">
+		<div class="logo-wrapper">
+			<a href="#"><img src="images/logo_style.svg" class="absolute-img"></a>
+		</div>
+		<div class="navbar" id="navbarID">
+			<a href="#experience-jump-point">Experience</a>
+			<a href="#portfolio">Portfolio</a>
+			<a href="#writing">Writing</a>
+			<a href="#fun">Fun</a>
+			<a href="javascript:void(0);" class="icon" onclick="menuClicked()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 	</div>
 	<div id="Basic-Info" class="section">
-		
-	</div>
-	<div id="svg-container">
-			<!-- PreserveAspectRation="none" forces this background to follow the width and height we give it, it should always fill the screen no matter the aspect ratio -->
-			<svg id="background" preserveAspectRatio="none" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 13000"><defs><linearGradient id="linear-gradient" x1="5843.78" y1="12091.76" x2="5843.78" y2="1254.71" gradientTransform="matrix(0.55, 0, 0, -0.55, -2231.22, 12513.07)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8db4b9"/><stop offset="0.8" stop-color="#397f91"/></linearGradient></defs><rect x="0.27" y="6113" width="1920" height="6887" style="fill:url(#linear-gradient)"/><rect y="22" width="1920" height="6091" style="fill:#fff"/><text/></svg>
-			<div class="logo-wrapper">
-				<a href="#"><img src="images/logo_style.svg" class="absolute-img"></a>
-			</div>
 			<h1 class="grabber huge-text forest-green">
 				Eli's Adventure
 			</h1>
 			<div class="typewriter-wrapper">
 				<canvas width="150" height="40" id="typewriter"></canvas>
 			</div>
-			<div class="about-jump-point big-text white">
-			</div>
-			<div id="about-wrapper" class="responsive-text-centered normal-text body-gray">Hi I'm Eli Vincent Yale. Full Stack Computer Engineer based in Truckee CA. <br><br>
+			<div id="about-wrapper" class="container normal-text body-gray">
+				Vincent Yale. Full Stack Computer Engineer based in Truckee CA. <br><br>
 				I design, create, and build systems, end to end. My focus is web with python and javascript. <br><br>
 				I am open to full time opportunities and freelance work. If you want to build something cool..
 			</div>
+	</div>
+	<div id="Scene1" class="section">
+		<div id="svg-container">
+			<!-- PreserveAspectRation="none" forces this background to follow the width and height we give it, it should always fill the screen no matter the aspect ratio -->
+			<svg id="background" preserveAspectRatio="none" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 13000"><defs><linearGradient id="linear-gradient" x1="5843.78" y1="12091.76" x2="5843.78" y2="1254.71" gradientTransform="matrix(0.55, 0, 0, -0.55, -2231.22, 12513.07)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#8db4b9"/><stop offset="0.8" stop-color="#397f91"/></linearGradient></defs><rect x="0.27" y="6113" width="1920" height="6887" style="fill:url(#linear-gradient)"/><rect y="22" width="1920" height="6091" style="fill:#fff"/><text/></svg>
 			<div id="sun">
 					<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 						<use href="./sprites/sprite_sheet.svg#sun-sprite"></use>
 						
 					</svg>
-			</div>
-			<div id="contact-button">
-				<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-					<a href="https://google.com" target="_blank">
-						<circle cx="50%" cy="50%" r="25%" style="fill:#f4a63a; z-index: 50; opacity: 0.0"/>
-					</a>
-				</svg>
 			</div>
 			<svg id="mountains1" class="responsive-svg-centered" viewBox="0 0 1350.41 363.88">
 				<use href="./sprites/sprite_sheet.svg#mountains1-sprite"></use>
@@ -158,100 +152,102 @@ EXTRA:
 			<svg id="tree9" viewBox="0 0 183.7 354.96" class="responsive-tree">
 				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
 			</svg>
-			<div class="big-text quicksand forest-green experience-jump-point">
-				Experience
+		</div>
+	</div>
+	<div id="Experience" class="section">
+		<div class="big-text quicksand forest-green experience-jump-point">
+			Experience
+		</div>
+		<div id="exp-grid" class="responsive-grid">
+			<div id="Two" class="exp-grid-item">2020</div>
+			<div id="Freelance" class="exp-grid-item">
+				<div class="grid-item-title">
+					<button class="plus" onclick="plusClicked('Freelance')"><span></span><span></span></button>
+					Freelance Developer
+				</div>
+				<div class="grid-item-body">
+					This is what I did This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig test more testsetste
+					
+				</div>
 			</div>
-			<div id="exp-grid" class="responsive-grid">
-				<div id="Two" class="exp-grid-item">2020</div>
-				<div id="Freelance" class="exp-grid-item">
-					<div class="grid-item-title">
-						<button class="plus" onclick="plusClicked('Freelance')"><span></span><span></span></button>
-						Freelance Developer
-					</div>
-					<div class="grid-item-body">
-						This is what I did This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig test more testsetste
-						
-					</div>
+			<div id="Nine" class="exp-grid-item">2019</div>
+			<div id="Ropes" class="exp-grid-item">
+				<div class="grid-item-title">
+					<button class="plus" onclick="plusClicked('Ropes')"><span></span><span></span></button>
+					Kawanhee Ropes Director
 				</div>
-				<div id="Nine" class="exp-grid-item">2019</div>
-				<div id="Ropes" class="exp-grid-item">
-					<div class="grid-item-title">
-						<button class="plus" onclick="plusClicked('Ropes')"><span></span><span></span></button>
-						Kawanhee Ropes Director
-					</div>
-					<div class="grid-item-body">
-						hollalahoala is what I did This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig test more testsetste
-						
-					</div>
+				<div class="grid-item-body">
+					hollalahoala is what I did This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig test more testsetste
+					
 				</div>
-				<div id="Travel" class="exp-grid-item">
-					<div class="grid-item-title">
-						<button class="plus" onclick="plusClicked('Travel')"><span></span><span></span></button>
-						International Travel
-					</div>
-					<div class="grid-item-body">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig 
-					</div>
-				</div>
-				<div id="SCU" class="exp-grid-item">
-					<div class="grid-item-title">
-						<button class="plus" onclick="plusClicked('SCU')"><span></span><span></span></button>
-						Santa Clara University<br>
-						<div class="normal-text">B.S. Computer Science and Engineering</div>
-					</div>
-					<div class="grid-item-body">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig 
-					</div>
-				</div>
-				<div id="Eight" class="exp-grid-item">2018</div>
-				<div id="Ford" class="exp-grid-item">
-					<div class="grid-item-title">
-						<button class="plus" onclick="plusClicked('Ford')"><span></span><span></span></button>
-						Advanced Engineering Intern<br>
-						Ford Research and Innovation Center
-					</div>
-					<div class="grid-item-body">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig 
-					</div>
-				</div>
-				<div id="Seven" class="exp-grid-item">2017</div>
-				<div id="Cisco" class="exp-grid-item">
-					<div class="grid-item-title">
-						<button class="plus" onclick="plusClicked('Cisco')"><span></span><span></span></button>
-						Software Engineering Intern
-						<br>Cisco Systems
-					</div>
-					<div class="grid-item-body">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdoig
-					</div>
-				</div>
-				<div id="Six" class="exp-grid-item">2016</div>
-				<div id="Kayak" class="exp-grid-item">
-					<div class="grid-item-title">
-						<button class="plus" onclick="plusClicked('Kayak')"><span></span><span></span></button>
-						Kawanhee Kayaking Instructor
-					</div>
-					<div class="grid-item-body">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdoig
-					</div>
-				</div>
-				<div id="Five" class="exp-grid-item">2015</div>
-				<div id="THS" class="exp-grid-item">
-					<div class="grid-item-title">
-						<button class="plus" onclick="plusClicked('THS')"><span></span><span></span></button>
-						THS
-					</div>
-					<div class="grid-item-body">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdoig
-					</div>
-				</div>
-				<div id="NineSeven" class="exp-grid-item">1997</div>
-				<div id="Born" class="exp-grid-item">Born</div>
 			</div>
-			<div class="big-text quicksand body-white projects-jump-point" id="projects">
-				Projects
+			<div id="Travel" class="exp-grid-item">
+				<div class="grid-item-title">
+					<button class="plus" onclick="plusClicked('Travel')"><span></span><span></span></button>
+					International Travel
+				</div>
+				<div class="grid-item-body">
+					This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig 
+				</div>
 			</div>
-			<svg id="coralgroup1" viewBox="0 0 577.9 256.18">
+			<div id="SCU" class="exp-grid-item">
+				<div class="grid-item-title">
+					<button class="plus" onclick="plusClicked('SCU')"><span></span><span></span></button>
+					Santa Clara University<br>
+					<div class="normal-text">B.S. Computer Science and Engineering</div>
+				</div>
+				<div class="grid-item-body">
+					This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig 
+				</div>
+			</div>
+			<div id="Eight" class="exp-grid-item">2018</div>
+			<div id="Ford" class="exp-grid-item">
+				<div class="grid-item-title">
+					<button class="plus" onclick="plusClicked('Ford')"><span></span><span></span></button>
+					Advanced Engineering Intern<br>
+					Ford Research and Innovation Center
+				</div>
+				<div class="grid-item-body">
+					This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig 
+				</div>
+			</div>
+			<div id="Seven" class="exp-grid-item">2017</div>
+			<div id="Cisco" class="exp-grid-item">
+				<div class="grid-item-title">
+					<button class="plus" onclick="plusClicked('Cisco')"><span></span><span></span></button>
+					Software Engineering Intern
+					<br>Cisco Systems
+				</div>
+				<div class="grid-item-body">
+					This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdoig
+				</div>
+			</div>
+			<div id="Six" class="exp-grid-item">2016</div>
+			<div id="Kayak" class="exp-grid-item">
+				<div class="grid-item-title">
+					<button class="plus" onclick="plusClicked('Kayak')"><span></span><span></span></button>
+					Kawanhee Kayaking Instructor
+				</div>
+				<div class="grid-item-body">
+					This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdoig
+				</div>
+			</div>
+			<div id="Five" class="exp-grid-item">2015</div>
+			<div id="THS" class="exp-grid-item">
+				<div class="grid-item-title">
+					<button class="plus" onclick="plusClicked('THS')"><span></span><span></span></button>
+					THS
+				</div>
+				<div class="grid-item-body">
+					This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdoig
+				</div>
+			</div>
+			<div id="NineSeven" class="exp-grid-item">1997</div>
+			<div id="Born" class="exp-grid-item">Born</div>
+		</div>
+	</div>
+	<div id="Scene2" class="section">
+		<svg id="coralgroup1" viewBox="0 0 577.9 256.18">
 				<use href="./sprites/sprite_sheet.svg#coralgroup1-sprite"></use>
 			</svg>
 			<svg id="sand1" viewBox="0 0 585 125">
@@ -286,7 +282,12 @@ EXTRA:
 			</svg>
 			<svg id="shelf6" viewBox="0 0 617.77 465">
 				<use href="./sprites/sprite_sheet.svg#shelf6-sprite"></use>
-			</svg>
+		</svg>
+	</div>
+	<div id="Projects" class="section">
+		<div class="big-text quicksand body-white projects-jump-point" id="projects">
+				Projects
+			</div>
 	</div>
 
 </body>

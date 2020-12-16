@@ -36,6 +36,19 @@
 *		doesn't scale right, text runs into svg
 */
 
+#Scene1 {
+	display: none;
+}
+#Scene2 {
+	display: none;
+}
+#Experience {
+	display: none;
+}
+#Projects {
+	display: none;
+}
+
 
 img {
 	width: 100%;
@@ -50,9 +63,23 @@ body {
 	overflow-x: hidden
 }
 
+.section {
+	height: auto;
+	width: 100%;
+}
 
+.container {
+	height: auto;
+	width: 1200px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/***************************Navigation***************************/
 .logo-wrapper {
-	position: absolute;
+	display: inline-block;
 	left:0%;
 	top:0%;
 	z-index: 1;
@@ -60,7 +87,6 @@ body {
 	height: 5vw;
 }
 
-/***************************Nav Bar***************************/
 .navbar {
 	overflow: hidden;
 	float: right;
@@ -97,11 +123,13 @@ body {
 *	
 */
 
+#Basic-Info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .grabber {
-	position: absolute;
-	top: 0.5%;
-	left: 50%;
-	transform: translate(-50%,0);
 	text-align: center;
 	font-family: 'Quicksand', sans-serif;
 	width: 50vw;
@@ -115,7 +143,7 @@ body {
 	transform: translate(-50%,0);
 }
 
-.responsive-text-centered {
+/*.responsive-text-centered {
 	text-align: center;
 	left: 0;
 	right: 0;
@@ -124,21 +152,12 @@ body {
 	display: block;
 	z-index: 3;
 	position: absolute;
-}
+}*/
 
-.about-jump-point {
-	z-index: 1;
-	left: 50%;
-	transform: translate(-50%,0);
-	top: 7.5%;
-	width: 10vw;
-	position: absolute;
-	text-align: center;
-}
 
-#about-wrapper {
-	top: 3.9%;
-}
+
+
+
 
 .experience-jump-point {
 	z-index: 10;
