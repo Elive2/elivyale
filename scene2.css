@@ -1,0 +1,137 @@
+#coralgroup1 {
+	z-index: 6;
+	position: absolute;
+	right: 2.2%;
+	top: 57.3%;
+	width: 380px;
+}
+
+#sand1 {
+	z-index: 5;
+	position: absolute;
+	right: 2%;
+	top: 58%;
+	width: 380px;
+}
+
+
+#shelf1 {
+	z-index: 4;
+	position: absolute;
+	right: 0px;
+	top: 58%;
+	width: 484px;
+}
+
+#shelf2 {
+	z-index: 3;
+	position: absolute;
+	right: 0px;
+	top: 58.2%;
+	width: 464px;
+}
+
+#coralgroup2 {
+	z-index: 6;
+	position: absolute;
+	right: 2.2%;
+	top: 64.5%;
+	width: 380px;
+}
+
+#sand2 {
+	z-index: 5;
+	position: absolute;
+	right: 3%;
+	top: 65%;
+	width: 380px;
+}
+
+#shelf3 {
+	z-index: 4;
+	position: absolute;
+	right: 0px;
+	top: 65%;
+	width: 484px;
+}
+
+#shelf4 {
+	z-index: 3;
+	position: absolute;
+	right: 0px;
+	top: 65.2%;
+	width: 464px;
+}
+
+#coralgroup3 {
+	z-index: 6;
+	position: absolute;
+	right: 1%;
+	top: 72%;
+	width: 380px;
+}
+
+#sand3 {
+	z-index: 5;
+	position: absolute;
+	right: 10px;
+	top: 73%;
+	width: 380px;
+}
+
+#shelf5 {
+	z-index: 4;
+	position: absolute;
+	right: 0px;
+	top: 73.0%;
+	width: 484px;
+}
+
+#shelf6 {
+	z-index: 3;
+	position: absolute;
+	right: 0px;
+	top: 73.2%;
+	width: 464px;
+}
+
+/*********************Media Queries****************************/
+
+@media screen and (max-width: 997px) {
+	#coralgroup1 {
+		width: 40vw;
+	}
+	#sand1 {
+		width: 40vw;
+	}
+	#shelf1 {
+		width: 50vw;
+	}
+	#shelf2 {
+		width: 50vw;
+	}
+	#coralgroup2 {
+		width: 40vw;
+	}
+	#sand2 {
+		width: 40vw;
+	}
+	#shelf3 {
+		width: 50vw;
+	}
+	#shelf4 {
+		width: 50vw;
+	}
+	#coralgroup3 {
+		width: 40vw;
+	}
+	#sand3 {
+		width: 40vw;
+	}
+	#shelf5 {
+		width: 50vw;
+	}
+	#shelf6 {
+		width: 50vw;
+	}
+}
