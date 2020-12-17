@@ -10,7 +10,7 @@ would be useful here with an offset variable and each
 child svg is multiplied by its unique constant factor*/
 .svg-container-background {
 	width: 100vw;
-	height: 1808px;
+	height: 1408px;
 	z-index: 100;
 }
 
@@ -38,7 +38,7 @@ child svg is multiplied by its unique constant factor*/
 	position: relative;
 	top: 0px;
 	left: 0px;
-	height: 1808px;
+	height: 1408px;
 	overflow: hidden;
 }
 
@@ -65,35 +65,35 @@ child svg is multiplied by its unique constant factor*/
 
 #mountains2 {
 	width: 920px;
-	top: 5.9%;
+	top: 6.9%;
 	z-index: 2;
 }
 
 #mountains3 {
-	top: 15.2%;
+	top: 16.2%;
 	z-index: 3;
 }
 
 #lake {
-	top: 16.6%;
+	top: 18.6%;
 	z-index: 2;
 }
 
 #cliff {
 	z-index: 1;
-	top: 22.0%;
+	top: 25.0%;
 }
 
 #pond {
 	z-index: 4;
-	top: 43.1%;
+	top: 52.1%;
 	width: 560px;
 	padding-left: 100px;
 }
 
 #waterfall {
 	z-index: 4;
-	top: 31.7%;
+	top: 37.7%;
 	width: 260px;
 	padding-left: 200px;
 }
@@ -120,56 +120,56 @@ child svg is multiplied by its unique constant factor*/
 #tree2 {
 	padding-left: 30px;
 	z-index: 3;
-	top: 27%;
+	top: 34%;
 	width: 120px;
 }
 
 #tree3 {
 	padding-right: 160px;
 	z-index: 3;
-	top: 30%;
+	top: 35%;
 	width: 140px;
 }
 
 #tree4 {
 	padding-left: 500px;
 	z-index: 2;
-	top: 25.3%;
+	top: 29.3%;
 	width: 150px;
 }
 
 #tree5 {
 	padding-left: 700px;
 	z-index: 2;
-	top: 30.0%;
+	top: 37.0%;
 	width: 160px;
 }
 
 #tree6 {
 	padding-left: 800px;
 	z-index: 2;
-	top: 43%;
+	top: 52%;
 	width: 150px;
 }
 
 #tree7 {
 	padding-right: 325px;
 	z-index: 5;
-	top: 54.4%;
+	top: 69.4%;
 	width: 110px;
 }
 
 #tree8 {
 	padding-right: 45px;
 	z-index: 5;
-	top: 59.4%;
+	top: 67.4%;
 	width: 150px;
 }
 
 #tree9 {
 	padding-left: 255px;
 	z-index: 5;
-	top: 59.9%;
+	top: 70.9%;
 	width: 130px;
 }
 

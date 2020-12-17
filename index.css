@@ -40,9 +40,6 @@
 #Scene2 {
 	display: none;
 }
-#Experience {
-	display: none;
-}
 #Projects {
 	display: none;
 }
@@ -69,6 +66,10 @@ body {
 .container {
 	height: auto;
 	width: 1200px;
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -146,14 +147,9 @@ body {
 }
 
 
-.experience-jump-point {
+.experience-header {
 	z-index: 10;
-	transform: translate(-70%,0);
-	position: absolute;
-	z-index: 3;
-	position: absolute;
-	left: 60vw;
-	top: 17%;
+	margin-bottom: 40px;
 	width: 20vw;
 }
 
@@ -213,8 +209,6 @@ button:hover span:first-of-type, button:hover span:last-of-type {
 	margin-right: auto;
 	margin-left: auto;
 	display: block;
-	position: absolute;
-	top: 18.4%;
 	width: 900px;
 	padding-left: 100px;
 	grid-row-gap: 20px;
