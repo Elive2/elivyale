@@ -1,3 +1,13 @@
+/*
+File: ./js/grid.js
+
+Author: Eli Yale
+
+Description:
+Implements a simple expandable grid to display
+my experience
+*/
+
 let grid = document.getElementById("exp-grid");
 
 function plusClicked(GridItemID) {

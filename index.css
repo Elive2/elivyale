@@ -1,12 +1,15 @@
 /*
 *File: index.css
 *
+* Author: Eli Yale
+*
 * Description: Main css file for index.html;
-* Content and structure is layed out in index.html. Color
-* size, positioning and layering is layed out in this file.
+* Content and structure is layed out in index.html. This contains
+* style only for text elements. The svg scene styling is found
+* in scen1.css and scen2.css respectively.
 * 
 * Positioning: is done with each individual element in relation
-* to the background gradient. So use absolute positioning with
+* to the svg background containers. So use absolute positioning with
 * top and left percantages to position. Z index starts at 0
 * for the background gradient. Use classes. This file positions
 * everything in its "end" position, js will later be used to give
@@ -20,12 +23,6 @@
 * Text Sizing: Use the text size classes in this doc, they use
 * vw units to scale with the viewport
 *
-* Scaling: all svgs and text scale with vw, not vh. vh should
-* not appear anywhere. So far I have been giving the svg a
-* arbitrairly large height, so it scales according to the available
-* width and never runs into restriction from height. There should
-* be a correct way to do this.
-*
 * Breakpoints: There is a single breakpoint when the screen is small
 * enough that the graphics touch the edge, then they scale down linearly;
 *
@@ -37,13 +34,9 @@
 */
 
 
-#Scene2 {
-	display: none;
-}
 #Projects {
 	display: none;
 }
-
 
 img {
 	width: 100%;
@@ -59,6 +52,7 @@ body {
 }
 
 .section {
+	display: block;
 	height: auto;
 	width: 100%;
 }
@@ -340,48 +334,40 @@ button:hover span:first-of-type, button:hover span:last-of-type {
 	background-color: #8db4b9;
 }
 
-/*******On Click Classes for grid**********/
+/********Blue Line**********/
+
+#blue-line {
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -1px;
+	padding-right: 219px;
+	display: block;
+	position: absolute;
+	width: 800px;
+	height: 105%;
+	z-index: 0;
+	overflow: hidden;
+}
+
+/*******Underwater**********/
+
+#underwater {
+	background-image: url(sprites/underwater_background.svg);
+	margin-top: 50px;
+	z-index: 2;
+}
 
 
-/**************************SVG contianers************************/
-
-
+/**************************Content Sections************************/
 
 #experience {
 	z-index: 3;
-	position: absolute;
-	left: 35vw;
-	top: 21.4%;
-	width: 20vw;
+	position: relative;
 }
 
-#tree10 {
-	margin-left: 17%;
-	z-index: 4;
-	top: 21%;
-	width: 150px;
-}
 
-#tree11 {
-	margin-left: 12%;
-	z-index: 4;
-	top: 22%;
-	width: 130px;
-}
-
-#tree12 {
-	margin-left: 10%;
-	z-index: 4;
-	top: 29%;
-	width: 130px;
-}
-
-#tree13 {
-	margin-left: 16%;
-	z-index: 4;
-	top: 30.4%;
-	width: 140px;
-}
 
 #projects {
 	z-index: 3;
@@ -544,5 +530,14 @@ button:hover span:first-of-type, button:hover span:last-of-type {
 		font-size: 1.5em;
 		position: relative;
 		transition: .3s;
+	}
+	#underwater {
+		margin-top: 40px;
+	}
+
+	#blue-line {
+		width: 70vw;
+		padding: initial;
+		margin-left: 0.07vw;
 	}
 }

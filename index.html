@@ -57,6 +57,7 @@ EXTRA:
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<link rel="stylesheet" type="text/css" href="scene1.css">
+	<link rel="stylesheet" type="text/css" href="scene2.css">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 	<!-- <link rel="icon" href="images/svg_sprites.svg" type="image/svg+xml"> -->
 	<!-- <link rel="import" href="./images/svg_sprites.svg"> -->
@@ -98,7 +99,6 @@ EXTRA:
 			<div id="sun">
 					<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 						<use href="./sprites/sprite_sheet.svg#sun-sprite"></use>
-						
 					</svg>
 			</div>
 			<svg id="mountains1" class="responsive-svg-centered" viewBox="0 0 1350.41 363.88">
@@ -123,9 +123,6 @@ EXTRA:
 			<svg id="waterfall" viewBox="0 0 429.21 456.3" class="responsive-svg-centered">
 				<use href="./sprites/sprite_sheet.svg#waterfall-sprite"></use>
 			</svg>
-			<!-- <svg id="river" viewBox="0 0 1920.29 4360.21" preserveAspectRatio="none">
-				<use href="./sprites/sprite_sheet.svg#river-sprite"></use>
-			</svg> -->
 			<svg id="tree1" viewBox="0 0 183.7 354.96" class="responsive-tree">
 				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
 			</svg>
@@ -153,9 +150,15 @@ EXTRA:
 			<svg id="tree9" viewBox="0 0 183.7 354.96" class="responsive-tree">
 				<use href="./sprites/sprite_sheet.svg#tree-sprite"></use>
 			</svg>
+			<svg id="river" viewBox="0 0 958.27 2012.33">
+				<use href="./sprites/sprite_sheet.svg#river-sprite"></use>
+			</svg>
 		</div>
 	</div>
-	<div id="Experience" class="section">
+	<div id="experience" class="section">
+		<svg id="blue-line" viewBox="0 0 958.27 4054" preserveaspectratio="none">
+			<use href="./sprites/sprite_sheet.svg#blue-line-sprite"></use>
+		</svg>
 		<div class="container">
 			<div class="big-text quicksand forest-green experience-header">
 				Experience
@@ -250,49 +253,24 @@ EXTRA:
 		</div>
 		
 	</div>
-	<div id="Scene2" class="section">
-		<svg id="coralgroup1" viewBox="0 0 577.9 256.18">
-				<use href="./sprites/sprite_sheet.svg#coralgroup1-sprite"></use>
-			</svg>
-			<svg id="sand1" viewBox="0 0 585 125">
-				<use href="./sprites/sprite_sheet.svg#sand1-sprite"></use>
-			</svg>
-			<svg id="shelf1" viewBox="0 0 710 354">
-				<use href="./sprites/sprite_sheet.svg#shelf1-sprite"></use>
-			</svg>
-			<svg id="shelf2" viewBox="0 0 693 354">
-				<use href="./sprites/sprite_sheet.svg#shelf2-sprite"></use>
-			</svg>
-			<svg id="coralgroup2" viewBox="0 0 562.76 236.54">
-				<use href="./sprites/sprite_sheet.svg#coralgroup2-sprite"></use>
-			</svg>
-			<svg id="sand2" viewBox="0 0 593 200">
-				<use href="./sprites/sprite_sheet.svg#sand2-sprite"></use>
-			</svg>
-			<svg id="shelf3" viewBox="0 0 671 435">
-				<use href="./sprites/sprite_sheet.svg#shelf3-sprite"></use>
-			</svg>
-			<svg id="shelf4" viewBox="0 0 636 435">
-				<use href="./sprites/sprite_sheet.svg#shelf4-sprite"></use>
-			</svg>
-			<svg id="coralgroup3" viewBox="0 0 548.79 281.7">
-				<use href="./sprites/sprite_sheet.svg#coralgroup3-sprite"></use>
-			</svg>
-			<svg id="sand3" viewBox="0 0 562.96 138.28">
-				<use href="./sprites/sprite_sheet.svg#sand3-sprite"></use>
-			</svg>
-			<svg id="shelf5" viewBox="0 0 658 465">
-				<use href="./sprites/sprite_sheet.svg#shelf5-sprite"></use>
-			</svg>
-			<svg id="shelf6" viewBox="0 0 617.77 465">
-				<use href="./sprites/sprite_sheet.svg#shelf6-sprite"></use>
-		</svg>
-	</div>
-	<div id="Projects" class="section">
-		<div class="big-text quicksand body-white projects-jump-point" id="projects">
+	<div id="underwater">
+		<div id="Scene2" class="section">
+			<div id="svg-container-scene2">
+				<svg id="coralgroup1" viewBox="0 0 1044.02 739.39" class="responsive-coral">
+					<use href="./sprites/sprite_sheet.svg#coral-group1-sprite"></use>
+				</svg>
+				<svg id="coralgroup2" viewBox="0 0 787.03 594.82" class="responsive-coral">
+					<use href="./sprites/sprite_sheet.svg#coral-group2-sprite"></use>
+				</svg>
+			</div>
+		</div>
+		<div id="Projects" class="section">
+			<div class="big-text quicksand body-white projects-jump-point" id="projects">
 				Projects
 			</div>
+		</div>
 	</div>
+	
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.js"></script>
@@ -308,6 +286,6 @@ EXTRA:
 <script src="js/svg4everybody.js"></script>
 <script>svg4everybody();</script>
 <!-- <script type="module" src="js/index.js"></script> -->
-<script type="text/javascript" src="js/index2.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
 <script type="text/javascript" src="js/grid.js"></script>
 </html>

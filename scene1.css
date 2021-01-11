@@ -1,13 +1,28 @@
+/*
+* File: scene1.css
+*
+* Author: Eli Yale;
+*
+* Description:
+* Styling for the mountains, lake and trees scene
+*
+* Scaling: all svgs and text scale with vw, not vh. vh should
+* not appear anywhere. So far I have been giving the svg a
+* arbitrairly large height, so it scales according to the available
+* width and never runs into restriction from height. There should
+* be a correct way to do this.
+*/
 
-/*this is like "background" it shouldn't
+
+/*this element shouldn't
 change in height so that all absolutelty positioned
 items within it maintain there position as the 
 window width changes. The height is set based
-on the svg. If you change the height here, and change
+on the background svg. If you change the height here, and change
 the height in the svg-container, all the svg
-positionings will be screwed up. Perhaps SASS
-would be useful here with an offset variable and each
-child svg is multiplied by its unique constant factor*/
+positionings will be screwed up. When the screen hits
+a responsive breakpoint, this height is dependent
+on the vw and all svg change size with vw as well*/
 .svg-container-background {
 	width: 100vw;
 	height: 1408px;
@@ -98,18 +113,6 @@ child svg is multiplied by its unique constant factor*/
 	padding-left: 200px;
 }
 
-#river {
-	left: 0;
-	right: 0;
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	position: absolute;
-	width: 100%;
-	z-index: 3;
-	top: 13.5%;
-}
-
 #tree1 {
 	padding-right: 530px;
 	z-index: 4;
@@ -173,6 +176,19 @@ child svg is multiplied by its unique constant factor*/
 	width: 130px;
 }
 
+#river {
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 250px;
+	top: 60%;
+	display: block;
+	position: absolute;
+	width: 800px;
+	z-index: 1;
+}
+
 @media screen and (max-width: 997px) {
 	#pond {
 		width: 55vw;
@@ -186,10 +202,10 @@ child svg is multiplied by its unique constant factor*/
 		margin-top: -0.2%;
 	}
 	#svg-container-background {
-		height: 180.8vw;
+		height: 143vw;
 	}
 	#svg-container {
-		height: 180.8vw;
+		height: 143vw;
 	}
 	/*#Mountas2 are set slightly smaller above so need to 
 	reset with priority here*/
@@ -214,9 +230,6 @@ child svg is multiplied by its unique constant factor*/
 		margin-right: initial !important;
 		padding-left: initial !important;
 		padding-right: initial !important;
-	}
-	#river {
-		height: 436vw;
 	}
 	#tree1 {
 		width: 15vw;
@@ -258,16 +271,7 @@ child svg is multiplied by its unique constant factor*/
 		width: 15vw;
 		left: 16%;
 	}
-	#tree11 {
-		width: 13vw;
-		left: 8%;
-	}
-	#tree12 {
-		width: 13vw;
-		left: 8%;
-	}
-	#tree13 {
-		width: 13vw;
-		left: 12%;
+	#river {
+		width: 70vw;
 	}
 }

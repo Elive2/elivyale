@@ -1,137 +1,66 @@
+/*
+* File: scene2.css
+*
+* Author: Eli Yale;
+*
+* Description:
+* Styling for the underwater scene
+*
+* Scaling: all svgs and text scale with vw, not vh. vh should
+* not appear anywhere. So far I have been giving the svg a
+* arbitrairly large height, so it scales according to the available
+* width and never runs into restriction from height. There should
+* be a correct way to do this.
+*/
+
+.responsive-coral {
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	position: absolute;
+}
+
+#svg-container-scene2 {
+	width: 100vw;
+	height: 1208px;
+	overflow: hidden;
+	position: relative;
+}
+
 #coralgroup1 {
-	z-index: 6;
-	position: absolute;
-	right: 2.2%;
-	top: 57.3%;
-	width: 380px;
-}
-
-#sand1 {
-	z-index: 5;
-	position: absolute;
-	right: 2%;
-	top: 58%;
-	width: 380px;
-}
-
-
-#shelf1 {
-	z-index: 4;
-	position: absolute;
-	right: 0px;
-	top: 58%;
-	width: 484px;
-}
-
-#shelf2 {
-	z-index: 3;
-	position: absolute;
-	right: 0px;
-	top: 58.2%;
-	width: 464px;
+	padding-left: 100px;
+	z-index: 2;
+	top: 8%;
+	width: 800px;
 }
 
 #coralgroup2 {
+	padding-right: 500px;
 	z-index: 6;
-	position: absolute;
-	right: 2.2%;
-	top: 64.5%;
-	width: 380px;
-}
-
-#sand2 {
-	z-index: 5;
-	position: absolute;
-	right: 3%;
-	top: 65%;
-	width: 380px;
-}
-
-#shelf3 {
-	z-index: 4;
-	position: absolute;
-	right: 0px;
-	top: 65%;
-	width: 484px;
-}
-
-#shelf4 {
-	z-index: 3;
-	position: absolute;
-	right: 0px;
-	top: 65.2%;
-	width: 464px;
-}
-
-#coralgroup3 {
-	z-index: 6;
-	position: absolute;
-	right: 1%;
-	top: 72%;
-	width: 380px;
-}
-
-#sand3 {
-	z-index: 5;
-	position: absolute;
-	right: 10px;
-	top: 73%;
-	width: 380px;
-}
-
-#shelf5 {
-	z-index: 4;
-	position: absolute;
-	right: 0px;
-	top: 73.0%;
-	width: 484px;
-}
-
-#shelf6 {
-	z-index: 3;
-	position: absolute;
-	right: 0px;
-	top: 73.2%;
-	width: 464px;
+	top: 52%;
+	width: 500px;
 }
 
 /*********************Media Queries****************************/
 
 @media screen and (max-width: 997px) {
+	#svg-container-scene2 {
+		height: 143vw;
+	}
+	.responsive-coral {
+		left: initial;
+		right: initial;
+		display: initial;
+	}
 	#coralgroup1 {
-		width: 40vw;
-	}
-	#sand1 {
-		width: 40vw;
-	}
-	#shelf1 {
-		width: 50vw;
-	}
-	#shelf2 {
-		width: 50vw;
+		width: 80vw;
+		padding-left: 15vw;
 	}
 	#coralgroup2 {
-		width: 40vw;
-	}
-	#sand2 {
-		width: 40vw;
-	}
-	#shelf3 {
 		width: 50vw;
-	}
-	#shelf4 {
-		width: 50vw;
-	}
-	#coralgroup3 {
-		width: 40vw;
-	}
-	#sand3 {
-		width: 40vw;
-	}
-	#shelf5 {
-		width: 50vw;
-	}
-	#shelf6 {
-		width: 50vw;
+		padding-right: initial;
+		padding-left: 5vw;
 	}
 }
