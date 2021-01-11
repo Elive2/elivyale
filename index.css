@@ -33,11 +33,6 @@
 *		doesn't scale right, text runs into svg
 */
 
-
-#Projects {
-	display: none;
-}
-
 img {
 	width: 100%;
 	height: 100%;
@@ -109,12 +104,7 @@ body {
 	display: none;
 }
 
-/**************************Content Section********************/
-/*
-*
-*	should I use translate or top to position the height?
-*	
-*/
+/**************************Info Section********************/
 
 #Basic-Info {
 	display: flex;
@@ -140,8 +130,14 @@ body {
 	margin: 40px;
 }
 
+/***********************Experience Section******************/
 
-.experience-header {
+#experience {
+	z-index: 3;
+	position: relative;
+}
+
+#experience-header {
 	z-index: 10;
 	margin-bottom: 40px;
 	width: 20vw;
@@ -360,21 +356,87 @@ button:hover span:first-of-type, button:hover span:last-of-type {
 }
 
 
-/**************************Content Sections************************/
+/**************************Projects Sections************************/
 
-#experience {
+#projects {
 	z-index: 3;
 	position: relative;
 }
 
-
-
-#projects {
-	z-index: 3;
-	position: absolute;
-	left: 35vw;
-	top: 51.4%;
+#projects-header {
+	z-index: 10;
+	margin-bottom: 40px;
 	width: 20vw;
+}
+
+#proj-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: minmax(0, 1fr);
+	z-index: 100;
+}
+
+.responsive-proj-grid {
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	width: 900px;
+	padding-left: 100px;
+	grid-row-gap: 20px;
+	grid-column-gap: 20px;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.proj-grid-item {
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.proj-grid-item-title {
+	font-size: 32px;
+}
+
+.proj-grid-item-subtitle {
+	font-size: 24px;
+}
+
+#original-beat {
+	grid-column: 1;
+	grid-row: 1;
+	background-color: #93AAC1;
+}
+
+#bug-byte {
+	grid-column: 2;
+	grid-row: 1;
+	background-color: #8DB4B9;
+}
+
+#gen-blues {
+	grid-column: 3;
+	grid-row: 1;
+	background-color: #8A9AA8;
+}
+
+#pellet-md {
+	grid-column: 1;
+	grid-row: 2;
+	background-color: #8A9AA8;
+}
+
+#vfg {
+	grid-column: 2;
+	grid-row: 2;
+	background-color: #94AA8C;
+}
+
+#slack-track {
+	grid-column: 3;
+	grid-row: 2;
+	background-color: #93AAC1;
 }
 
 
