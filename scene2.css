@@ -43,6 +43,16 @@
 	width: 500px;
 }
 
+#sun-rays {
+	z-index: 7;
+	width: 70vw;
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	position: absolute;
+}
+
 /*********************Media Queries****************************/
 
 @media screen and (max-width: 997px) {
