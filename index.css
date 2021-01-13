@@ -206,9 +206,10 @@ button:hover span:first-of-type, button:hover span:last-of-type {
 	transform: scale(1.3,1.3);
 }
 
+/*auto is used so the SCU grid item can expand its width*/
 #exp-grid {
 	display: grid;
-	grid-template-columns: .25fr 1fr 1fr 5px 1fr;
+	grid-template-columns: .29fr 1fr 1fr 5px auto;
 	grid-template-rows: minmax(0, 1fr);
 	z-index: 100;
 }
@@ -230,6 +231,7 @@ button:hover span:first-of-type, button:hover span:last-of-type {
 .exp-grid-item {
 	border-radius: 10px;
 	padding: 10px;
+	overflow: hidden;
 }
 
 
@@ -238,11 +240,16 @@ button:hover span:first-of-type, button:hover span:last-of-type {
 }
 
 .grid-item-active {
-	display: initial;
+	display: block;
 	min-height: auto;
 	min-width: auto;
 	height: auto;
-	width: auto;
+}
+
+/*when SCU grid item expands, we want the title to fill the width
+and thus need to override the default 250px width*/
+.grid-title-active {
+	width: 300px !important;
 }
 
 .grid-item-subtitle {
@@ -255,11 +262,20 @@ button:hover span:first-of-type, button:hover span:last-of-type {
 	color: black;
 }
 
+/*Issues:
+1) Year dates are now obstructed when screen is shrunk
+2) Should I set a height as in NWW below? This prevents
+the box from growing in height when SCU is expanded. Currently
+all the boxes grow which looks weird
+3) SCU titles are now off when responsive, I fixed the width, thats why
+will need to set something new for width at the breakpoint.*/
+
 #NWW {
 	grid-column-start: 2;
 	grid-column-end: 4;
 	grid-row: 1;
 	background-color: #8db4b9;
+	height: 100px;
 }
 
 #Freelance {
@@ -294,6 +310,14 @@ button:hover span:first-of-type, button:hover span:last-of-type {
 	grid-row-start: 3;
 	grid-row-end: 8;
 	background-color: #8a9aa8;
+}
+
+#scu-grid-item-title {
+	width: 250px;
+}
+
+#scu-grid-item-body {
+	width: 300px;
 }
 
 #Eight {
@@ -646,6 +670,11 @@ li {
 		display: block;
 		text-align: left;
 	}
+
+	.container {
+		width: 100vw;
+	}
+
 	#background {
 		height: 1300vw;
 	}
@@ -670,10 +699,16 @@ li {
 
 	.responsive-grid {
 		margin: 10%;
-		width: 80vw;
+		margin-right: 3%;
+		width: 90vw;
 		padding-left: 0px;
 		grid-row-gap: 20px;
 		grid-column-gap: 10px;
+	}
+
+	.year-date {
+		text-orientation: sideways;
+		writing-mode: vertical-rl;
 	}
 
 	.grid-item-title {
@@ -683,6 +718,14 @@ li {
 	.exp-grid-item {
 		border-radius: 10px;
 		padding: 10px;
+	}
+
+	#scu-grid-item-title {
+		width: 18vw;
+	}
+
+	#scu-grid-item-body {
+		width: 18vw;
 	}
 
 	.plus {
@@ -772,6 +815,11 @@ li {
 		min-width: auto;
 		height: auto;
 		width: auto;
+	}
+
+	.year-date {
+		text-orientation: initial;
+		writing-mode: initial;
 	}
 
 	#Two {

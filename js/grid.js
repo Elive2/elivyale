@@ -12,11 +12,13 @@ let grid = document.getElementById("exp-grid");
 
 function plusClicked(GridItemID) {
 	let element = document.getElementById(GridItemID);
+	let title = element.querySelector('.grid-item-title')
 
 	let body = element.querySelector('.grid-item-body');
 	let plusButton = element.querySelector('.plus');
 	let secondSpan = plusButton.childNodes[1];
 	if (body.classList.contains("grid-item-active")) {
+		title.classList.remove('grid-title-active');
 		body.classList.remove("grid-item-active");
 		secondSpan.classList.remove("button-clicked");
 		secondSpan.style.left = "25%";
@@ -25,6 +27,9 @@ function plusClicked(GridItemID) {
 
 	}
 	else {
+		if (element.id == "SCU") {
+			title.classList.add('grid-title-active');
+		}
 		body.classList.add("grid-item-active");
 		secondSpan.style.left = "50%";
 		secondSpan.style.right = "50%";
