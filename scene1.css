@@ -57,20 +57,19 @@ on the vw and all svg change size with vw as well*/
 	overflow: hidden;
 }
 
-#sun {
-	z-index: 4;
-	position: absolute;
-	top: 5.8%;
-	left: 56%;
-	width: 200px;
+#contact-button {
+	z-index: 5;
+	background-color: #ABC5E3;
+	border-radius: 8px;
+	padding: 15px;
+	border: none;
+	transition: background-color 0.2s;
+	font-weight: bold;
+	color: #A49479;
 }
 
-#contact-button {
-	z-index: 50;
-	position: absolute;
-	top: 5.8%;
-	left: 56%;
-	width: 200px;
+#contact-button:hover {
+	background-color: #87AACC;
 }
 
 #mountains1 {

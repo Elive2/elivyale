@@ -62,7 +62,7 @@ EXTRA:
 	<!-- <link rel="icon" href="images/svg_sprites.svg" type="image/svg+xml"> -->
 	<!-- <link rel="import" href="./images/svg_sprites.svg"> -->
 	<!-- <object type="image/svg+xml" data="/images/svg_sprites.svg" style="display:none"></object> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- used for the hamburger icon -->
 </head>
 <body>
 	<div id="Navigation" class="section">
@@ -70,9 +70,10 @@ EXTRA:
 			<a href="#"><img src="sprites/logo_style.svg" class="absolute-img"></a>
 		</div>
 		<div class="navbar" id="navbarID">
-			<a href="#experience-jump-point">Experience</a>
+			<a href="#experience">Experience</a>
 			<a href="#portfolio">Portfolio</a>
-			<a href="#writing">Writing</a>
+			<a href="#projects">Projects</a>
+			<a href="#writing">Blog</a>
 			<a href="#fun">Fun</a>
 			<a href="javascript:void(0);" class="icon" onclick="menuClicked()">
 				<i class="fa fa-bars"></i>
@@ -90,16 +91,21 @@ EXTRA:
 				Hi I'm Eli Vincent Yale. Full Stack Computer Engineer based in Truckee CA. <br><br>
 				I design, create, and build systems, end to end. My focus is web with python and javascript. <br><br>
 				I am open to full time opportunities and freelance work. If you want to build something cool..
+				
 			</div>
 	</div>
 	<div id="Scene1" class="section">
 		<div id="svg-container">
 			<!-- PreserveAspectRation="none" forces this background to follow the width and height we give it, it should always fill the screen no matter the aspect ratio -->
-			<svg id="Layer_2" class="svg-container-background" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920.13 1808.43"><defs><radialGradient id="radial-gradient-ambient-light" cx="724.52" cy="83.26" fx="501.29987189550894" fy="-472.1271939650735" r="672.3" gradientTransform="translate(0 201.54) scale(1 1.02)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe47f" stop-opacity="0.6"/><stop offset="0.47" stop-color="#fff4ca" stop-opacity="0.41"/><stop offset="0.91" stop-color="#fff" stop-opacity="0.2"/></radialGradient></defs><rect width="1920.13" height="1808.43" style="fill:url(#radial-gradient-ambient-light)"/></svg>
-			<div id="sun">
+			<div id="sun"><!-- 
 					<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 						<use href="./sprites/sprite_sheet.svg#sun-sprite"></use>
-					</svg>
+					</svg> -->
+			</div>
+			<div class="container">
+				<button id="contact-button" class="med-text quicksand">
+					<a href="mailto:elivyale@gmail.com">Contact</a>
+				</button>
 			</div>
 			<svg id="mountains1" class="responsive-svg-centered" viewBox="0 0 1350.41 363.88">
 				<use href="./sprites/sprite_sheet.svg#mountains1-sprite"></use>
@@ -165,34 +171,49 @@ EXTRA:
 			</div>
 			<div id="exp-grid" class="responsive-grid">
 				<div id="Two" class="exp-grid-item normal-text">2020</div>
-				<div id="Freelance" class="exp-grid-item">
+				<div id="NWW" class="exp-grid-item">
+					<button class="plus" onclick="plusClicked('NWW')"><span></span><span></span></button>
 					<div class="grid-item-title med-text">
-						<button class="plus" onclick="plusClicked('Freelance')"><span></span><span></span></button>
+						New World Wear
+					</div>
+					<div class="grid-item-subtitle normal-text">
+						Web Developer
+					</div>
+					<div class="grid-item-body normal-text">
+						Part-time web developer and Technical Lead. Built and administerd websites with Sage, Webflow, and Treepl. Implemented sales funnels, analytics, pricing algorithms, SEO during a go-to-market campaign to increase lead generation 2x. Gained valuable business development and administration skills.
+						
+					</div>
+				</div>
+				<div id="Freelance" class="exp-grid-item">
+					<button class="plus" onclick="plusClicked('Freelance')"><span></span><span></span></button>
+					<div class="grid-item-title med-text">
 						Freelance Developer
 					</div>
 					<div class="grid-item-body normal-text">
-						This is what I did This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig test more testsetste
+						Worked with several small businesses to develop websites and branding. Created PelletMD.com for a local medical company, and vfgllc.com for a Sillicon Valley facilities company. Learned how to engage and work with a client while balancing requirements with technical, budetary, and time restraints.
 						
 					</div>
 				</div>
 				<div id="Nine" class="exp-grid-item  normal-text">2019</div>
-				<div id="Ropes" class="exp-grid-item">
-					<div class="grid-item-title med-text">
-						<button class="plus" onclick="plusClicked('Ropes')"><span></span><span></span></button>
-						Kawanhee Ropes Director
-					</div>
-					<div class="grid-item-body normal-text">
-						hollalahoala is what I did This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig test more testsetste
-						
-					</div>
-				</div>
 				<div id="Travel" class="exp-grid-item">
+					<button class="plus" onclick="plusClicked('Travel')"><span></span><span></span></button>
 					<div class="grid-item-title med-text">
-						<button class="plus" onclick="plusClicked('Travel')"><span></span><span></span></button>
 						International Travel
 					</div>
 					<div class="grid-item-body normal-text">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig 
+						After Kwanhee ended I set off to Europe for 3 months of solo Travel. I visited France, Ireland, Germany, Switzerland, Spain, Italy, Slovenia, Czech Republic, Netherlands, and Denmark. It was a trip with no plans, which led to some of the deepest self reflection and personal growth I have had.
+					</div>
+				</div>
+				<div id="Ropes" class="exp-grid-item">
+					<button class="plus" onclick="plusClicked('Ropes')"><span></span><span></span></button>
+					<div class="grid-item-title med-text">
+						Camp Kawanhee
+					</div>
+					<div class="grid-item-subtitle normal-text">
+						Ropes Course Director
+					</div>
+					<div class="grid-item-body normal-text">
+						I took some time off after graduating SCU to return to a summer camp I attended as a kid. Camp Kawanhee is one of my favorite places and the most foundational in my personal growth. I served as the director of the Ropes Course and was responsible for guarunteeing campers safety and fun. My team and I led trips, developed safety procedures, and created a camp-favorite year long climbing competition.
 					</div>
 				</div>
 				<div id="SCU" class="exp-grid-item">
@@ -202,36 +223,43 @@ EXTRA:
 						<div class="normal-text">B.S. Computer Science and Engineering</div>
 					</div>
 					<div class="grid-item-body normal-text">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig 
+						In 2019 I graduated from the school of engineering at SCU with a 3.51 GPA in CSE and a mathematics minor. Some highlights of my time here include membership in Bronco Design, ACM and founding the SCU climbing club. My favorite classes were Chaos Theory, Intro to AI, Cryptography, and Graduate Machine Learning.
 					</div>
 				</div>
 				<div id="Eight" class="exp-grid-item normal-text">2018</div>
 				<div id="Ford" class="exp-grid-item">
+					<button class="plus" onclick="plusClicked('Ford')"><span></span><span></span></button>
 					<div class="grid-item-title med-text">
-						<button class="plus" onclick="plusClicked('Ford')"><span></span><span></span></button>
-						Advanced Engineering Intern<br>
 						Ford Research and Innovation Center
 					</div>
+					<div class="grid-item-subtitle normal-text">
+						Advanced Engineering Intern
+					</div>
 					<div class="grid-item-body normal-text">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdo;ig 
+						I researched and developed a full-stack web application for real-time, onboard geofencing. As a team of 3, we iterated in-vehicle hardware modules, transport protocols, geospatial databases, and geofencing algorithms to provide the fastest and most accurate geodata. We managed to lower the real-time geofencing time from several minutes to a few seconds.
 					</div>
 				</div>
 				<div id="Seven" class="exp-grid-item normal-text">2017</div>
 				<div id="Cisco" class="exp-grid-item">
+					<button class="plus" onclick="plusClicked('Cisco')"><span></span><span></span></button>
 					<div class="grid-item-title med-text">
-						<button class="plus" onclick="plusClicked('Cisco')"><span></span><span></span></button>
+						Cisco Systems
+					</div>
+					<div class="grid-item-subtitle normal-text">
 						Software Engineering Intern
-						<br>Cisco Systems
 					</div>
 					<div class="grid-item-body normal-text">
-						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdoig
+						As an intern in the Cisco IT division, I developed iOS applications that leveraged Computer Vision to be used by the Safety and Security department. The first app used native iOS libraries to perform facial feature detection and ensure a photo submitted by an employee for their badge is compliant with corporate guidelines. The second application used OpenCV and openALPR to scan license plates in real time allowing the Safety and Security team to identify suspicious vehicles as employee owned or not.
 					</div>
 				</div>
 				<div id="Six" class="exp-grid-item normal-text">2016</div>
 				<div id="Kayak" class="exp-grid-item">
+					<button class="plus" onclick="plusClicked('Kayak')"><span></span><span></span></button>
 					<div class="grid-item-title med-text">
-						<button class="plus" onclick="plusClicked('Kayak')"><span></span><span></span></button>
-						Kawanhee Kayaking Instructor
+						Camp Kawanhee
+					</div>
+					<div class="grid-item-subtitle normal-text">
+						Kayak Instructor
 					</div>
 					<div class="grid-item-body normal-text">
 						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdoig
@@ -247,15 +275,18 @@ EXTRA:
 						This is some body text. A BUNCH OF TEst to test the overflow a a dive this is judt fiaosdiofnaosignaoingaoi asodiofna ioa;ndoio aoign adsogiona dsoioga gasdoig
 					</div>
 				</div>
-				<div id="NineSeven normal-text" class="exp-grid-item">1997</div>
+				<div id="NineSeven" class="exp-grid-item normal-text">1997</div>
 				<div id="Born" class="exp-grid-item  med-text">Born</div>
 			</div>
 		</div>
-		
+		<svg id="ship" viewBox="0 0 387.95 304.31">
+			<use href="./sprites/sprite_sheet.svg#ship-sprite"></use>
+		</svg>
 	</div>
 	<div id="underwater">
 		<div id="Scene2" class="section">
 			<div id="svg-container-scene2">
+				
 				<svg id="coralgroup1" viewBox="0 0 1044.02 739.39" class="responsive-coral">
 					<use href="./sprites/sprite_sheet.svg#coral-group1-sprite"></use>
 				</svg>
@@ -311,7 +342,7 @@ EXTRA:
 									<li>PHP</li>
 								</ul>
 								<svg id="bug-byte-logo" class="card-logo">
-									<use href="./sprites/sprite_sheet.svg#original-beat-logo-sprite"></use>
+									<use href="./sprites/sprite_sheet.svg#bug-byte-logo-sprite"></use>
 								</svg>
 							</div>
 							<div class="flip-card-back" id="bug-byte-back">
@@ -336,7 +367,7 @@ EXTRA:
 									<li>Python</li>
 								</ul>
 								<svg id="gen-blues-logo" class="card-logo">
-									<use href="./sprites/sprite_sheet.svg#original-beat-logo-sprite"></use>
+									<use href="./sprites/sprite_sheet.svg#gen-blues-logo-sprite"></use>
 								</svg>
 							</div>
 							<div class="flip-card-back" id="gen-blues-back">
@@ -361,7 +392,7 @@ EXTRA:
 									<li>Illustrator</li>
 								</ul>
 								<svg id="pellet-md-logo" class="card-logo">
-									<use href="./sprites/sprite_sheet.svg#original-beat-logo-sprite"></use>
+									<use href="./sprites/sprite_sheet.svg#pelletmd-logo-sprite"></use>
 								</svg>
 							</div>
 							<div class="flip-card-back" id="pellet-md-back">
@@ -380,18 +411,18 @@ EXTRA:
 								<p class="proj-grid-item-subtitle normal-text">
 									Website for a Sillicon Valley Firm
 								</p>
-								<ul>
+								<ul class="small-text">
 									<li>Webflow</li>
 									<li>After Effects</li>
 									<li>HTML/CSS</li>
 								</ul>
 								<svg id="vfg-logo" class="card-logo">
-									<use href="./sprites/sprite_sheet.svg#original-beat-logo-sprite"></use>
+									<use href="./sprites/sprite_sheet.svg#vfg-logo-sprite"></use>
 								</svg>
 							</div>
 							<div class="flip-card-back" id="vfg-back">
-								<p class="proj-grid-item-body normal-text">
-									Built this in 2020
+								<p class="proj-grid-item-body small-text">
+									Engaged this Valley Facilities company to build out their first website and redesign their logo and branding. Used After Effects and Lottie to add dynamic website content.
 								</p>
 							</div>
 						</div>
@@ -403,20 +434,20 @@ EXTRA:
 									Slack Track
 								</p>
 								<p class="proj-grid-item-subtitle normal-text">
-									Python app to Sync users from slack workspace to a database
+									Python App To Sync Users From Slack
 								</p>
-								<ul>
+								<ul class="small-text">
 									<li>Python</li>
 									<li>Flask</li>
 									<li>MongoDB</li>
 								</ul>
 								<svg id="slack-track-logo" class="card-logo">
-									<use href="./sprites/sprite_sheet.svg#original-beat-logo-sprite"></use>
+									<use href="./sprites/sprite_sheet.svg#slack-track-logo-sprite"></use>
 								</svg>
 							</div>
 							<div class="flip-card-back" id="slack-track-back">
-								<p class="proj-grid-item-body normal-text">
-									Built this in 2020
+								<p class="proj-grid-item-body small-text">
+									Explored Flask and Mongo with this personal project. Deployed to to Digital Ocean on an Ubuntu instance with Gunicorn and NGINX. The application will sync all users in a slack workspace and persist them to a database. The app then displays the users in a list view with React.
 								</p>
 							</div>
 						</div>
@@ -424,6 +455,9 @@ EXTRA:
 				</div>
 			</div>
 		</div>
+	</div>
+	<div id="footer" class="section">
+		
 	</div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.js"></script>

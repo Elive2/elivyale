@@ -29,6 +29,15 @@
 	position: relative;
 }
 
+#ship {
+	position: absolute;
+	display: block;
+	z-index: 500;
+	width: 300px;
+	bottom: -50px;
+	left: 100px;
+}
+
 #coralgroup1 {
 	padding-left: 100px;
 	z-index: 2;
@@ -64,9 +73,12 @@
 		right: initial;
 		display: initial;
 	}
+	#ship {
+		width: 30vw;
+	}
 	#coralgroup1 {
 		width: 80vw;
-		padding-left: 15vw;
+		padding-left: 10vw;
 	}
 	#coralgroup2 {
 		width: 50vw;
