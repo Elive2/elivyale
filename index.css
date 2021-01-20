@@ -256,59 +256,63 @@ and thus need to override the default 250px width*/
 	color: #4D4E4E;
 }
 
-#Two {
+#twentyone {
 	grid-column: 1;
 	grid-row: 1;
 	color: black;
 }
 
-/*Issues:
-1) Year dates are now obstructed when screen is shrunk
-2) Should I set a height as in NWW below? This prevents
-the box from growing in height when SCU is expanded. Currently
-all the boxes grow which looks weird
-3) SCU titles are now off when responsive, I fixed the width, thats why
-will need to set something new for width at the breakpoint.*/
+#greenfield {
+	grid-column-start: 2;
+	grid-column-end: 6;
+	grid-row: 1;
+	background-color: #367384;
+}
+
+#Two {
+	grid-column: 1;
+	grid-row: 2;
+	color: black;
+}
 
 #NWW {
 	grid-column-start: 2;
-	grid-column-end: 4;
-	grid-row: 1;
+	grid-column-end: 6;
+	grid-row: 2;
 	background-color: #8db4b9;
-	height: 100px;
 }
 
 #Freelance {
 	grid-column-start: 2;
-	grid-column-end: 4;
-	grid-row: 2;
+	grid-column-end: 6;
+	grid-row: 3;
 	background-color: #a2aa8a;
 }
 
 #Nine {
 	grid-column: 1;
-	grid-row: 3;
+	grid-row: 4;
 	color: black;
 }
 
 #Travel {
 	grid-column-start: 2;
 	grid-column-end: 4;
-	grid-row: 3;
+	grid-row: 4;
 	background-color: #93aac1;
 }
 
 #Ropes {
 	grid-column-start: 2;
 	grid-column-end: 4;
-	grid-row: 4;
+	grid-row: 5;
 	background-color: #b79191;
 }
 
 #SCU {
 	grid-column: 5;
-	grid-row-start: 3;
-	grid-row-end: 8;
+	grid-row-start: 4;
+	grid-row-end: 9;
 	background-color: #8a9aa8;
 }
 
@@ -322,66 +326,66 @@ will need to set something new for width at the breakpoint.*/
 
 #Eight {
 	grid-column: 1;
-	grid-row: 5;
+	grid-row: 6;
 	color: black;
 }
 
 #Ford {
 	grid-column-start: 2;
 	grid-column-end: 4;
-	grid-row: 5;
-	background-color: #8896ba;
+	grid-row: 6;
+	background-color: #367384;
 }
 
 #Seven {
 	grid-column: 1;
-	grid-row: 6;
+	grid-row: 7;
 	color: black;
 }
 
 #Cisco {
 	grid-column-start: 2;
 	grid-column-end: 4;
-	grid-row: 6;
+	grid-row: 7;
 	background-color: #8896ba;
 }
 
 #Six {
 	grid-column: 1;
-	grid-row: 7;
+	grid-row: 8;
 	color: black;
 }
 
 #Kayak {
 	grid-column-start: 2;
 	grid-column-end: 4;
-	grid-row: 7;
+	grid-row: 8;
 	background-color: #b79191;
 }
 
 #Five {
 	grid-column: 1;
-	grid-row: 8;
+	grid-row: 9;
 	color: black;
 }
 
 #THS {
 	grid-column-start: 2;
 	grid-column-end: 7;
-	grid-row: 8;
+	grid-row: 9;
 	background-color: #94aa8c;
 }
 
 #NineSeven {
 	grid-column: 1;
-	grid-row: 9;
+	grid-row: 10;
 	color: black;
 }
 
 #Born {
 	grid-column-start: 2;
 	grid-column-end: 7;
-	grid-row: 9;
+	grid-row: 10;
 	background-color: #8db4b9;
 }
 
@@ -692,7 +696,7 @@ li {
 
 	#exp-grid {
 		display: grid;
-		grid-template-columns: .25fr 1fr 1fr 5px 1fr;
+		grid-template-columns: .25fr 1fr 1fr 5px auto;
 		grid-template-rows: minmax(0, 1fr);
 		z-index: 100;
 	}
@@ -721,17 +725,17 @@ li {
 	}
 
 	#scu-grid-item-title {
-		width: 18vw;
+		width: 25vw;
 	}
 
 	#scu-grid-item-body {
-		width: 18vw;
+		width: 50vw;
 	}
 
 	.plus {
 		background-color: transparent;
-		width: 20px;
-		height: 20px;
+		width: 40px;
+		height: 40px;
 		border: 0;
 		font-size: 1.5em;
 		position: relative;
@@ -822,90 +826,108 @@ li {
 		writing-mode: initial;
 	}
 
-	#Two {
+	#twentyone {
 		grid-column: 1;
 		grid-row: 1;
 	}
 
-	#NWW {
+	#greenfield {
 		grid-column: 1;
 		grid-row: 2;
 	}
 
-	#Freelance {
+	#Two {
 		grid-column: 1;
 		grid-row: 3;
 	}
 
-	#Nine {
+	#NWW {
 		grid-column: 1;
 		grid-row: 4;
 	}
 
-	#Travel {
+	#Freelance {
 		grid-column: 1;
 		grid-row: 5;
 	}
 
-	#Ropes {
+	#Nine {
 		grid-column: 1;
 		grid-row: 6;
 	}
 
-	#SCU {
+	#Travel {
 		grid-column: 1;
 		grid-row: 7;
 	}
 
-	#Eight {
+	#Ropes {
 		grid-column: 1;
 		grid-row: 8;
 	}
 
-	#Ford {
+	#SCU {
 		grid-column: 1;
 		grid-row: 9;
 	}
 
-	#Seven {
+	#scu-grid-item-title {
+		width: 100%;
+	}
+
+	#scu-grid-item-body {
+		width: 100%;
+	}
+
+	#Eight {
 		grid-column: 1;
 		grid-row: 10;
 	}
 
-	#Cisco {
+	#Ford {
 		grid-column: 1;
 		grid-row: 11;
 	}
 
-	#Six {
+	#Seven {
 		grid-column: 1;
 		grid-row: 12;
+	}
+
+	#Cisco {
+		grid-column: 1;
+		grid-row: 13;
+	}
+
+	#Six {
+		grid-column: 1;
+		grid-row: 14;
 		color: black;
 	}
 
 	#Kayak {
 		grid-column: 1;
-		grid-row: 13;
+		grid-row: 15;
 	}
 
 	#Five {
 		grid-column: 1;
-		grid-row: 14;
+		grid-row: 16;
 	}
 
 	#THS {
 		grid-column: 1;
-		grid-row: 15;
+		grid-row: 17;
 	}
 
 	#NineSeven {
 		grid-column: 1;
-		grid-row: 16;
+		grid-row: 18;
 	}
 
 	#Born {
 		grid-column: 1;
-		grid-row: 17;
+		grid-row: 19;
 	}
 	#proj-grid {
 		display: grid;

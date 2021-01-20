@@ -1,0 +1,20 @@
+[x] - write a small svg concatenator and load svgs from that
+	- try all different export combos from illustrator
+	- try not using spritebot
+	- alternatives to <use>, viewboxing, or object, or just plain image
+	- try in a test file like locate.html, incase it is a z-index issue
+	*Lessons: SVG Gradients, wether internal css, inline css or whatever
+	do not render when the svg is <used> in another document. This is a 
+	chrome bug. You should be able to define the gradients in your html, 
+	then reference them in the <use>ed svg But this is tricky and not 
+	worth the hassle. If the SVG is small enough, like the cliffs and
+	shelves, just inline them to save requests. If the SVG is larger like 
+	the trees, just request it and load however you like. Defeat boco
+	literally loads all svg independently with no speed issues, well a little
+	there is a loading animation at the start.
+[ ] ***Two Options 1) continue on this path with the mountains, or 2) 
+	migrate to giant SVG loaded once. 1) is more readable, keeps everything seperate for animation. With 2) I will need to go into the SVG's and add groups and Id to targer them for animation and I'm not even sure if that will work. With 1) I can pass them to an animator class like sway or parallax. But with 2) its less code in the HTML, would be easier to make the bulk svg responsive. this would be so much easier but it is harder to animate. when you <use> an SVG it gets created with a shadow root (closed) and you can't access anything inside of it with JS. See this forum https://greensock.com/forums/topic/17381-how-to-select-the-shadow-dom/ you have to do some weird workaround with CSS inheritance on the shadow host, but that looks ugly, see this forum https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
+
+		Here's a great example of the goal: https://www.youtube.com/watch?v=YcM4bRxtLcs
+
+		but she puts all the SVG code inside the html without <use>

@@ -2,26 +2,7 @@
 TODO:
 (in no particular order)
 
-[x] - write a small svg concatenator and load svgs from that
-	- try all different export combos from illustrator
-	- try not using spritebot
-	- alternatives to <use>, viewboxing, or object, or just plain image
-	- try in a test file like locate.html, incase it is a z-index issue
-	*Lessons: SVG Gradients, wether internal css, inline css or whatever
-	do not render when the svg is <used> in another document. This is a 
-	chrome bug. You should be able to define the gradients in your html, 
-	then reference them in the <use>ed svg But this is tricky and not 
-	worth the hassle. If the SVG is small enough, like the cliffs and
-	shelves, just inline them to save requests. If the SVG is larger like 
-	the trees, just request it and load however you like. Defeat boco
-	literally loads all svg independently with no speed issues, well a little
-	there is a loading animation at the start.
-[ ] ***Two Options 1) continue on this path with the mountains, or 2) 
-	migrate to giant SVG loaded once. 1) is more readable, keeps everything seperate for animation. With 2) I will need to go into the SVG's and add groups and Id to targer them for animation and I'm not even sure if that will work. With 1) I can pass them to an animator class like sway or parallax. But with 2) its less code in the HTML, would be easier to make the bulk svg responsive. this would be so much easier but it is harder to animate. when you <use> an SVG it gets created with a shadow root (closed) and you can't access anything inside of it with JS. See this forum https://greensock.com/forums/topic/17381-how-to-select-the-shadow-dom/ you have to do some weird workaround with CSS inheritance on the shadow host, but that looks ugly, see this forum https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/
 
-		Here's a great example of the goal: https://www.youtube.com/watch?v=YcM4bRxtLcs
-
-		but she puts all the SVG code inside the html without <use>
 [ ] - write content
 [ ] - links to social and github
 [ ] - add footer
@@ -44,6 +25,8 @@ EXTRA:
 [ ] - Blog Page
 [ ] - easter eggs
 [ ] - accessibility
+[ ] - open graph meta tags
+[ ] - favicon
 [ ] - theme changes based on time of day or season
 
 
@@ -170,6 +153,19 @@ EXTRA:
 				Experience
 			</div>
 			<div id="exp-grid" class="responsive-grid">
+				<div id="twentyone" class="exp-grid-item normal-text year-date">2021</div>
+				<div id="greenfield" class="exp-grid-item">
+					<button class="plus" onclick="plusClicked('greenfield')"><span></span><span></span></button>
+					<div class="grid-item-title med-text">
+						Ford Greenfield Labs
+					</div>
+					<div class="grid-item-subtitle normal-text">
+						Research Software Engineer
+					</div>
+					<div class="grid-item-body normal-text">
+						I will be beggiing full time work as part of the software resarch team in Palo Alto in Early 2021!
+					</div>
+				</div>
 				<div id="Two" class="exp-grid-item normal-text year-date">2020</div>
 				<div id="NWW" class="exp-grid-item">
 					<button class="plus" onclick="plusClicked('NWW')"><span></span><span></span></button>
@@ -221,7 +217,7 @@ EXTRA:
 						<button class="plus" onclick="plusClicked('SCU')"><span></span><span></span></button>
 						Santa Clara University<br>
 						<div class="grid-item-subtitle normal-text">
-							B.S. Computer Science and Engineering
+							B.S. Computer Science and Engineering,<br> Mathematics Minor
 						</div>
 					</div>
 					<div class="grid-item-body normal-text" id="scu-grid-item-body">
@@ -232,13 +228,13 @@ EXTRA:
 				<div id="Ford" class="exp-grid-item">
 					<button class="plus" onclick="plusClicked('Ford')"><span></span><span></span></button>
 					<div class="grid-item-title med-text">
-						Ford Research and Innovation Center
+						Ford Greenfield Labs
 					</div>
 					<div class="grid-item-subtitle normal-text">
 						Advanced Engineering Intern
 					</div>
 					<div class="grid-item-body normal-text">
-						I researched and developed a full-stack web application for real-time, onboard geofencing. As a team of 3, we iterated in-vehicle hardware modules, transport protocols, geospatial databases, and geofencing algorithms to provide the fastest and most accurate geodata. We managed to lower the real-time geofencing time from several minutes to a few seconds.
+						I researched and developed a full-stack web application for real-time, onboard geofencing. As a team of 3, we iterated in-vehicle hardware modules, transport protocols, geospatial databases, and geofencing algorithms to provide the fastest and most accurate telemetry. We managed to lower the real-time geofencing time from several minutes to a few seconds.
 					</div>
 				</div>
 				<div id="Seven" class="exp-grid-item normal-text year-date">2017</div>
@@ -274,7 +270,7 @@ EXTRA:
 						THS
 					</div>
 					<div class="grid-item-body normal-text">
-						Ah. High School. 
+						Ah. High School. At truckee high school I served as president of the Rotary interact club and competed in Baseball, Tennis, Track and Field, Academic Team, and Nordic Skiing.
 					</div>
 				</div>
 				<div id="NineSeven" class="exp-grid-item normal-text year-date">1997</div>
@@ -285,7 +281,7 @@ EXTRA:
 			<use href="./sprites/sprite_sheet.svg#ship-sprite"></use>
 		</svg>
 	</div>
-	<div id="underwater">
+	<div id="underwater" class="section">
 		<div id="Scene2" class="section">
 			<div id="svg-container-scene2">
 				
